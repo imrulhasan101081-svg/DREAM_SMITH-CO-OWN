@@ -2,26 +2,261 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --navy: #0b1b32;
+    --navy-deep: #071120;
+    --navy-surface: #112440;
+    --ivory: #f7f3ea;
+    --ivory-dim: #efe9da;
+    --gold: #b08d4f;
+    --gold-bright: #d4af6a;
+    --gold-muted: rgba(176, 141, 79, 0.15);
+    --ink: #12140f;
+    --sage: #5c7a5e;
+    --sage-dim: #e9eee7;
+    --line: rgba(176, 141, 79, 0.28);
+    --line-light: rgba(11, 27, 50, 0.12);
+
+    /* Motion — weighted easing. Nothing in this build uses `ease` or `linear`. */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    background: var(--ivory);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Hairlines stay hairlines — never let a stray child widen the page. */
+    overflow-x: hidden;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--gold-bright);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--gold);
+    color: var(--navy-deep);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* ── Scroll reveal ─────────────────────────────────────────────────────────
+     Armed only when JS is present (html.js), so a failed/blocked bundle leaves
+     content visible instead of permanently transparent. */
+  .js [data-reveal] {
+    opacity: 0;
+    transform: translate3d(0, var(--reveal-y, 28px), 0) scale(var(--reveal-s, 1));
+    transition:
+      opacity 0.85s var(--ease-out-expo),
+      transform 1.05s var(--ease-out-expo);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .js [data-reveal].is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .js [data-reveal] {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* ── Structural rules ─────────────────────────────────────────────────────
+     Grid children sit on a 1px background that shows through the gaps, so
+     dividers are true hairlines rather than stacked borders that double up. */
+  .rule-grid {
+    display: grid;
+    gap: 1px;
+    background-color: var(--line-light);
+    border: 1px solid var(--line-light);
+  }
+
+  .rule-grid-dark {
+    display: grid;
+    gap: 1px;
+    background-color: rgba(176, 141, 79, 0.22);
+    border: 1px solid rgba(176, 141, 79, 0.22);
+  }
+
+  /* Corner ticks — registration marks, drafting-table language. */
+  .corner-ticks {
+    position: relative;
+  }
+  .corner-ticks::before,
+  .corner-ticks::after {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-color: var(--gold);
+    pointer-events: none;
+  }
+  .corner-ticks::before {
+    top: -1px;
+    left: -1px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+  }
+  .corner-ticks::after {
+    right: -1px;
+    bottom: -1px;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+  }
+
+  /* ── Controls ─────────────────────────────────────────────────────────────
+     Square, load-bearing. Depth comes from a border and a colour shift, not
+     from a blurred drop shadow. */
+  .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    background-color: var(--gold);
+    color: var(--navy-deep);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border: 1px solid var(--gold);
+    border-radius: 2px;
+    transition:
+      background-color 0.35s var(--ease-out-expo),
+      border-color 0.35s var(--ease-out-expo),
+      transform 0.35s var(--ease-out-expo);
+  }
+  .btn-gold:hover {
+    background-color: var(--gold-bright);
+    border-color: var(--gold-bright);
+    transform: translateY(-2px);
+  }
+  .btn-gold:active {
+    transform: translateY(0);
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    border: 1px solid rgba(247, 243, 234, 0.28);
+    color: var(--ivory);
+    border-radius: 2px;
+    transition:
+      border-color 0.35s var(--ease-out-expo),
+      color 0.35s var(--ease-out-expo),
+      background-color 0.35s var(--ease-out-expo);
+  }
+  .btn-outline:hover {
+    border-color: var(--gold-bright);
+    color: var(--gold-bright);
+    background-color: rgba(176, 141, 79, 0.06);
+  }
+
+  .btn-outline-ink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    border: 1px solid var(--line-light);
+    color: var(--navy);
+    border-radius: 2px;
+    transition:
+      border-color 0.35s var(--ease-out-expo),
+      color 0.35s var(--ease-out-expo);
+  }
+  .btn-outline-ink:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  /* Nav underline that draws from the left on hover. */
+  .nav-link {
+    position: relative;
+    transition: color 0.3s var(--ease-out-expo);
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 1px;
+    width: 100%;
+    background-color: var(--gold-bright);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s var(--ease-out-expo);
+  }
+  .nav-link:hover::after,
+  .nav-link:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  /* Imagery: slow, weighted push-in on hover. */
+  .media-frame {
+    overflow: hidden;
+    position: relative;
+  }
+  .media-frame img {
+    transition: transform 1.2s var(--ease-out-expo);
+  }
+  .media-frame:hover img {
+    transform: scale(1.05);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .media-frame:hover img,
+    .btn-gold:hover {
+      transform: none;
+    }
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Mono eyebrow — the recurring section marker. */
+  .eyebrow {
+    font-family: var(--font-ibm-plex-mono), monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  /* Tabular figures so stat rows and counters don't shimmy. */
+  .figures {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
   }
 }

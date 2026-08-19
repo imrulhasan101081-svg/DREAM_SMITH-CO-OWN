@@ -1,0 +1,620 @@
+{
+  "NotFound": {
+    "eyebrow": "404 Error",
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist or may have moved.",
+    "backHome": "Back to Home"
+  },
+  "ErrorPage": {
+    "eyebrow": "Something Went Wrong",
+    "title": "An Unexpected Error Occurred",
+    "description": "We hit a snag loading this page. Please try again, and if the problem persists, contact us.",
+    "retry": "Try Again"
+  },
+  "Header": {
+    "banner": "DREAM SMITH CO-OWN PLATFORM · PRODUCTION PREVIEW",
+    "nav": {
+      "howItWorks": "How It Works",
+      "project": "Chihno Project",
+      "security": "Investor Security",
+      "cares": "Azo Cares",
+      "verify": "Verify Certificate"
+    },
+    "logoAlt": "Dream Smith Co-Own",
+    "portalLink": "Investor Portal",
+    "portalLinkMobile": "Investor Portal Login",
+    "reserveShare": "Reserve a Share",
+    "toggleMenuAria": "Toggle navigation menu"
+  },
+  "Footer": {
+    "logoAlt": "Dream Smith Co-Own by AZO",
+    "tagline": "A fractional co-ownership programme by Dream Smith Properties Pvt. Ltd., Rajshahi. RJSC registered since 2011.",
+    "platform": {
+      "title": "Platform",
+      "howItWorks": "How It Works",
+      "project": "Chihno Project",
+      "security": "Investor Security",
+      "cares": "Azo Cares"
+    },
+    "account": {
+      "title": "Account",
+      "login": "Investor Login",
+      "verify": "Verify a Certificate",
+      "apply": "Reserve a Share"
+    },
+    "company": {
+      "title": "Company",
+      "whyDifferent": "Why Different",
+      "testimonials": "Testimonials",
+      "contact": "Contact"
+    },
+    "copyright": "© 2026 Dream Smith Properties Pvt. Ltd. All rights reserved.",
+    "location": "Rajshahi, Bangladesh"
+  },
+  "HomePage": {
+    "hero": {
+      "eyebrow": "Dream Smith Properties · Est. 2011",
+      "titleLine1": "Own Rajshahi's",
+      "titleLine2": "next landmark.",
+      "subtitle": "Co-own 100 sq. ft. of Dream Smith Chihno for ৳4,00,000 — fully documented, notarized, and backed by a bank-secured buy-back.",
+      "reserveShare": "Reserve Your Share",
+      "seeHowItWorks": "See How It Works",
+      "statPricePerShare": "PER SHARE / 100 SQ FT",
+      "statTerm": "TO MATURITY & BUY-BACK",
+      "statReturn": "AVG. ANNUAL RETURN",
+      "cert": {
+        "liveVerified": "LIVE VERIFIED",
+        "certNo": "CERT NO. DSCO-CERT-2026-0143",
+        "companyName": "Dream Smith Properties Pvt. Ltd.",
+        "certificateTitle": "Certificate of Co-Ownership",
+        "holderLabel": "HOLDER",
+        "projectLabel": "PROJECT",
+        "shareLabel": "SHARE",
+        "shareValue": "100 sq. ft. (1 Unit)",
+        "maturesLabel": "MATURES",
+        "buybackLabel": "BUY-BACK",
+        "mdTitle": "MANAGING DIRECTOR"
+      },
+      "statRemaining": "SHARES STILL AVAILABLE"
+    },
+    "howItWorks": {
+      "eyebrow": "The Model",
+      "title": "A simple structure, <em>fully on paper</em> —",
+      "titleLine2": "now fully visible online.",
+      "description": "Co-ownership isn't a stock or a crypto token. It's a notarized legal agreement over a fixed, undivided share of a real building — with a bank cheque behind the promise.",
+      "steps": {
+        "step1": {
+          "title": "Reserve your share",
+          "desc": "Choose 1 or more shares (100 sq ft each) at ৳4,00,000 per share in Dream Smith Chihno."
+        },
+        "step2": {
+          "title": "Sign & secure",
+          "desc": "Sign the notarized investment agreement and receive a post-dated bank cheque for ৳5,50,000 the same day."
+        },
+        "step3": {
+          "title": "Track construction",
+          "desc": "Follow Chihno's build progress with dated photo updates in your investor account, month by month."
+        },
+        "step4": {
+          "title": "Receive your buy-back",
+          "desc": "At 36 months, the company buys back your share for ৳5,50,000 — or you take first refusal on the flat itself."
+        }
+      }
+    },
+    "project": {
+      "eyebrow": "Flagship Project",
+      "titlePrefix": "Dream Smith",
+      "description": "A 10-storey residential & studio development at Oxoy More, Kazla — directly facing RUET and Rajshahi University's main gate road.",
+      "renderPlaceholder": "RENDER PLACEHOLDER",
+      "facts": {
+        "location": "Location",
+        "structure": "Structure",
+        "constructionPeriod": "Construction period",
+        "totalShares": "Total shares",
+        "pricePerShare": "Price per share",
+        "firstRefusalRate": "First-refusal rate",
+        "months": "{months} months",
+        "units": "{count} units",
+        "perSqFt": "{amount} / sq ft"
+      },
+      "sharesReserved": "SHARES RESERVED",
+      "reserveShareIn": "Reserve a Share in {project}",
+      "viewLegalDocuments": "View Legal Documents"
+    },
+    "returns": {
+      "eyebrow": "The Numbers",
+      "title": "Clear terms.",
+      "titleEmphasis": "No surprises.",
+      "description": "Every share follows the identical, fixed schedule below — written into your notarized agreement and matched by a post-dated security cheque.",
+      "yourInvestment": "Your Investment",
+      "investmentDetail": "100 sq ft · 1 share",
+      "termLabel": "36-Month Term",
+      "termDetail": "30 mo. build",
+      "termSubdetail": "+ 6 mo. settlement window",
+      "buybackReturn": "Buy-Back Return",
+      "buybackDetail": "৳1,50,000 net profit · ~12.5%/yr",
+      "securedNote": "SECURED BY POST-DATED BANK CHEQUE ISSUED AT SIGNING — NOT A PROJECTION"
+    },
+    "security": {
+      "eyebrow": "Investor Security",
+      "title": "Every safeguard,",
+      "titleEmphasis": "documented and shown.",
+      "description": "We built Dream Smith Co-Own around one principle: nothing should depend on trust alone. Here is exactly what protects your deposit.",
+      "items": {
+        "agreement": {
+          "title": "Notarized investment agreement",
+          "desc": "A bilingual, dual-signed agreement on a judicial stamp, notarized before a First Class Magistrate — naming your exact share and buy-back terms."
+        },
+        "cheque": {
+          "title": "Post-dated security cheque",
+          "desc": "A company bank cheque for your full ৳5,50,000 buy-back amount, dated to your maturity date, handed to you at signing."
+        },
+        "title_": {
+          "title": "Title-clear land verification",
+          "desc": "An advocate-certified title search report confirming the Chihno land is unencumbered and not mortgaged to any bank."
+        },
+        "certificate": {
+          "title": "Verifiable digital certificate",
+          "desc": "Your Certificate of Co-Ownership carries a unique QR code — scan it anytime to confirm your holding and see live project progress."
+        }
+      }
+    },
+    "ourLegacy": {
+      "eyebrow": "Our Legacy",
+      "lede": "Before Chihno, there were buildings you can stand in front of today.",
+      "note": "Dream Smith Properties has been designing and delivering residential projects in Rajshahi since 2011. Co-Own is the same company, the same builders — with the paperwork opened up.",
+      "maya": "Finishing · Rajshahi",
+      "malancho": "Handed over · Rajshahi"
+    },
+    "cares": {
+      "badge": "AZO CARES",
+      "title": "Your return also",
+      "titleEmphasis": "gives back.",
+      "description": "5% of Dream Smith Properties' net profit from every project is committed to the Azo Cares humanitarian fund — supporting education and medical care for those in need. Every taka is tracked here, with receipts.",
+      "seeFullReport": "See the Full Impact Report",
+      "liveTotal": "Charity Fund — Live Total",
+      "ytd": "2026 YTD",
+      "contributedToDate": "Contributed to date across all active projects",
+      "scholarships": "Student scholarships — Rajshahi",
+      "medicalFund": "Medical support fund",
+      "reliefPrograms": "Local relief programs"
+    },
+    "trustStrip": {
+      "since2011": {
+        "b": "Since 2011",
+        "s": "DREAM SMITH PROPERTIES"
+      },
+      "rjsc": {
+        "b": "RJSC Registered",
+        "s": "LIMITED COMPANY"
+      },
+      "notarized": {
+        "b": "Notarized",
+        "s": "EVERY AGREEMENT"
+      },
+      "location": {
+        "b": "Prime Location",
+        "s": "RUET / RU FRONTAGE"
+      }
+    },
+    "cta": {
+      "eyebrow": "Limited Availability",
+      "title": "{count} shares remaining in {project}.",
+      "description": "Reserve online, then complete your notarized agreement and cheque handover in person or with our team.",
+      "startApplication": "Start Your Application",
+      "investorPortal": "Investor Portal"
+    },
+    "structure": {
+      "totalRaise": "Total Raise",
+      "sharesUnit": "shares"
+    }
+  },
+  "HowItWorks": {
+    "eyebrow": "The Co-Ownership Model",
+    "title": "A simple structure,",
+    "titleEmphasis": "fully on paper.",
+    "description": "Co-ownership isn't a stock or a crypto token. It's a notarized legal agreement over a fixed, undivided share of a real building.",
+    "steps": {
+      "step1": {
+        "title": "Reserve your share",
+        "desc": "Choose 1 or more shares (100 sq ft each) at ৳4,00,000 per share in Dream Smith Chihno. Our application process requires basic KYC (NID, contact info, and nominee details)."
+      },
+      "step2": {
+        "title": "Sign & secure",
+        "desc": "Upon approval, sign the notarized investment agreement on a judicial stamp. You will immediately receive a post-dated company bank cheque for your full ৳5,50,000 buy-back amount, securing your principal and return."
+      },
+      "step3": {
+        "title": "Track construction",
+        "desc": "Log in to your investor dashboard anytime to follow Chihno's build progress. We upload dated photo updates and phase reports month by month, directly from the site."
+      },
+      "step4": {
+        "title": "Receive your buy-back",
+        "desc": "At the end of the 36-month term, the company buys back your share for ৳5,50,000 as agreed. Alternatively, you hold the right of first refusal to purchase the flat outright at a preferential rate of ৳5,500/sq ft."
+      }
+    },
+    "startApplication": "Start Your Application",
+    "copyright": "© 2026 Dream Smith Properties Pvt. Ltd. All rights reserved."
+  },
+  "Security": {
+    "eyebrow": "Our Commitment to Trust",
+    "title": "Every safeguard,",
+    "titleEmphasis": "documented and shown.",
+    "description": "We built Dream Smith Co-Own around one principle: nothing should depend on trust alone. Here is exactly what protects your deposit.",
+    "safeguards": {
+      "agreement": {
+        "title": "Notarized Investment Agreement",
+        "desc": "A bilingual, dual-signed agreement on a judicial stamp (৳300), notarized before a First Class Magistrate in Rajshahi. The document legally outlines your exact 100 sq ft share, the 36-month timeline, and the buy-back commitment."
+      },
+      "cheque": {
+        "title": "Post-Dated Security Cheque",
+        "desc": "At the exact moment of signing your investment agreement, you are handed a company bank cheque for your full ৳5,50,000 buy-back amount, dated to your exact maturity date."
+      },
+      "title_": {
+        "title": "Title-Clear Land Verification",
+        "desc": "Prior to funding, an advocate-certified title search report confirms the Chihno land is entirely unencumbered and not mortgaged to any commercial bank or third party."
+      },
+      "certificate": {
+        "title": "Verifiable Digital Certificate",
+        "desc": "Your Certificate of Co-Ownership is issued securely. It carries a unique QR code — anyone can scan it anytime to cryptographically confirm your holding on our public ledger."
+      }
+    },
+    "sampleDocs": {
+      "title": "View Sample Legal Documents",
+      "description": "Transparency is key. You can request a redacted PDF sample of our standard Co-Ownership investment agreement and title clearance certificate.",
+      "requestButton": "Request Sample Docs by Email"
+    },
+    "copyright": "© 2026 Dream Smith Properties Pvt. Ltd. All rights reserved."
+  },
+  "Cares": {
+    "eyebrow": "Our Responsibility",
+    "title": "Azo Cares Ledger",
+    "description": "At Dream Smith Co-Own, we believe in lifting our community as we grow. A fixed percentage of our net profits from every commercial project is directly distributed to those in need.",
+    "totalDistributed": "Total Distributed to Date",
+    "totalInitiatives": "Total Initiatives Funded",
+    "ledgerTitle": "Public Distribution Ledger",
+    "chronological": "Chronological",
+    "emptyState": "No distributions have been logged yet. Check back soon!",
+    "distributedOn": "Distributed On",
+    "fundedVia": "Funded via {project}",
+    "unknownProject": "Unknown"
+  },
+  "Apply": {
+    "cancelReturnHome": "Cancel & Return Home",
+    "stepLabel": "Step 1 of 2",
+    "title": "Reserve Your Share",
+    "sharesQuestion": "How many shares would you like to reserve?",
+    "totalInvestment": "Total Investment",
+    "shareNote": "Each share represents 100 sq ft and guarantees a ৳5,50,000 buy-back after 36 months.",
+    "investorDetails": "Investor Details (KYC)",
+    "fullName": "Full Name (As per NID)",
+    "fullNamePlaceholder": "e.g. Md. Ashiqur Rahman",
+    "mobileNumber": "Mobile Number",
+    "mobileNumberPlaceholder": "01XXX-XXXXXX",
+    "emailAddress": "Email Address",
+    "emailPlaceholder": "name@example.com",
+    "nidNumber": "NID Number",
+    "nidPlaceholder": "10 or 17 digit NID",
+    "disclaimer": "By submitting this form, you request to reserve {shares} share(s) in Dream Smith Chihno. This does not require immediate payment. Our team will verify your details and invite you to our Rajshahi office to execute the notarized agreement and hand over your post-dated security cheque.",
+    "submitting": "Submitting...",
+    "submit": "Submit Reservation Request",
+    "successTitle": "Application Received",
+    "successMessage": "Thank you, {name}. We have received your application for {shares} share(s) in Chihno. Our onboarding team will contact you at {phone} within 24 hours to arrange the notarized agreement signing and cheque handover.",
+    "returnHome": "Return to Home"
+  },
+  "Contact": {
+    "eyebrow": "Get in Touch",
+    "title": "We're here to answer",
+    "titleEmphasis": "your questions.",
+    "description": "Whether you are ready to invest or just want to learn more about our fractional ownership model, our team in Rajshahi is ready to assist you.",
+    "office": {
+      "title": "Corporate Office",
+      "addressLine1": "Level 4, Dream Smith Tower",
+      "addressLine2": "Alupatty, Boalia",
+      "addressLine3": "Rajshahi 6100, Bangladesh",
+      "hours": "Sat - Thu, 10:00 AM - 6:00 PM"
+    },
+    "siteVisit": {
+      "title": "Visit the Chihno Site",
+      "description": "Interested in our flagship project? You can visit the site location at Oxoy More, Kazla, directly facing RUET and Rajshahi University's main gate road.",
+      "mapsLink": "VIEW ON GOOGLE MAPS →"
+    },
+    "formTitle": "Send us a message"
+  },
+  "ContactForm": {
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "John Doe",
+    "email": "Email Address",
+    "emailPlaceholder": "john@example.com",
+    "phone": "Phone Number (Optional)",
+    "phonePlaceholder": "+880 1...",
+    "message": "Message",
+    "messagePlaceholder": "How can we help you?",
+    "sending": "Sending…",
+    "send": "Send Message",
+    "successTitle": "Message Sent",
+    "successMessage": "Thank you for reaching out. Our team will get back to you within 24 hours.",
+    "sendAnother": "Send another message",
+    "genericError": "Something went wrong. Please try again."
+  },
+  "Testimonials": {
+    "eyebrow": "Investor Stories",
+    "title": "Trust earned through",
+    "titleEmphasis": "transparency.",
+    "description": "We've been building in Rajshahi since 2011. Our co-ownership platform extends our track record to a new generation of investors. Here is what they have to say about the process, security, and returns.",
+    "items": {
+      "t1": {
+        "quote": "I was initially skeptical about fractional ownership, but the immediate handover of a post-dated cheque and a notarized agreement completely changed my mind. It's a tangible, secured investment.",
+        "role": "Chihno Investor · 3 Shares"
+      },
+      "t2": {
+        "quote": "The ability to track construction progress through the investor portal gives me great peace of mind. I don't have to visit the site; I can see the monthly updates and photos right on my dashboard.",
+        "role": "Chihno Investor · 1 Share"
+      },
+      "t3": {
+        "quote": "I've invested in various schemes before, but the clarity of Dream Smith's model is unmatched. Everything is written down, notarized, and backed by a 15-year-old company.",
+        "role": "Chihno Investor · 5 Shares"
+      },
+      "t4": {
+        "quote": "What impressed me most was the title verification. They provided advocate-certified reports proving the land was clear before I even made my booking.",
+        "role": "Chihno Investor · 2 Shares"
+      },
+      "t5": {
+        "quote": "The digital certificate with the QR code is brilliant. I can verify my holding instantly, and the integration of the Azo Cares charity makes me proud to invest here.",
+        "role": "Chihno Investor · 1 Share"
+      }
+    }
+  },
+  "WhyDifferent": {
+    "eyebrow": "The Dream Smith Advantage",
+    "title": "Beyond promises.",
+    "titleEmphasis": "Concrete security.",
+    "description": "We built our fractional ownership model to solve a fundamental problem in real estate investment: trust. By combining traditional legal documentation with digital transparency, we ensure your investment is protected at every level.",
+    "sections": {
+      "s1": {
+        "title": "1. Notarized Legal Protection",
+        "desc": "Unlike informal partnerships or tokenized assets, your co-ownership is grounded in a legally binding agreement. Every share you purchase is documented on a judicial stamp and notarized before a First Class Magistrate. This document explicitly outlines your 100 sq. ft. share and the guaranteed buy-back amount."
+      },
+      "s2": {
+        "title": "2. The Post-Dated Security Cheque",
+        "desc": "We don't just offer projections; we offer guarantees. At the time of signing your investment agreement, you are handed a post-dated bank cheque for your full buy-back amount (e.g., ৳5,50,000 for a ৳4,00,000 investment). This cheque is dated precisely 36 months from your investment date, providing immediate financial security."
+      },
+      "s3": {
+        "title": "3. Unencumbered Title",
+        "desc": "We only offer co-ownership on projects where the land is completely free of mortgages or banking liens. Before investing, you have full access to advocate-certified title search reports confirming the land's clear status."
+      },
+      "s4": {
+        "title": "4. Live Digital Verification",
+        "desc": "Your physical documentation is paired with a verifiable digital certificate. Each certificate features a unique QR code. Anyone scanning this code can verify the authenticity of your holding directly against our secure database, ensuring your investment is recognized and transparent."
+      }
+    },
+    "readyTitle": "Ready to secure your share?",
+    "viewProjects": "View Available Projects"
+  },
+  "Login": {
+    "title": "Investor Portal",
+    "subtitle": "Sign in to track your holdings and certificates.",
+    "email": "Email Address",
+    "emailPlaceholder": "name@example.com",
+    "password": "Password",
+    "signingIn": "Signing In…",
+    "signIn": "Sign In",
+    "invalidCredentials": "Invalid email or password.",
+    "notInvestorYet": "Not an investor yet?",
+    "reserveShare": "Reserve a share"
+  },
+  "Verify": {
+    "returnToMain": "Return to Main Site",
+    "eyebrow": "Public Ledger Verification",
+    "title": "Verify a Certificate",
+    "description": "Enter a Co-Ownership Certificate Number below or scan the QR code on the physical document to verify its authenticity and current status.",
+    "inputPlaceholder": "e.g. DSCO-CERT-2026-0143",
+    "verifying": "Verifying...",
+    "verify": "Verify",
+    "authentic": "AUTHENTIC",
+    "certificateNumber": "Certificate Number",
+    "holderName": "Holder Name",
+    "project": "Project",
+    "shareVolume": "Share Volume",
+    "units": "{count} Unit(s)",
+    "maturityDate": "Maturity Date",
+    "notAvailable": "N/A",
+    "status": "Status",
+    "guaranteedBuyback": "Guaranteed Buy-Back",
+    "notFoundTitle": "Record Not Found",
+    "connectionError": "Failed to connect to verification server."
+  },
+  "ProjectDetail": {
+    "nav": {
+      "howItWorks": "How It Works",
+      "project": "Chihno Project",
+      "security": "Investor Security",
+      "cares": "Azo Cares"
+    },
+    "reserveShare": "Reserve a Share",
+    "breadcrumb": {
+      "home": "Home",
+      "projects": "Projects"
+    },
+    "currentlyFunding": "Currently Funding",
+    "titlePrefix": "Dream Smith",
+    "description": "A premium 10-storey residential & studio development at Oxoy More, Kazla — directly facing RUET and Rajshahi University's main gate road. Designed for modern living with uncompromised quality.",
+    "animationTitle": "Dream Smith Chihno 3D Animation",
+    "investmentDetails": "Investment Details",
+    "facts": {
+      "sharePrice": "Share Price",
+      "shareSize": "Share Size",
+      "maturity": "Maturity",
+      "buybackValue": "Buy-Back Value",
+      "totalUnits": "Total Project Units"
+    },
+    "sharesReserved": "SHARES RESERVED",
+    "sharesRemaining": "{count} SHARES REMAINING",
+    "reserveYourShare": "Reserve Your Share",
+    "gallery": {
+      "eyebrow": "Visual Identity",
+      "title": "Project",
+      "titleEmphasis": "Gallery"
+    },
+    "progress": {
+      "eyebrow": "Live Updates",
+      "title": "Construction",
+      "titleEmphasis": "Progress",
+      "description": "Track the physical progress of Dream Smith Chihno. Authenticated photo updates are posted directly from the site by our project engineers.",
+      "latest": "LATEST",
+      "viewAll": "View All Updates →"
+    },
+    "copyright": "© 2026 Dream Smith Properties Pvt. Ltd. All rights reserved."
+  },
+  "Progress": {
+    "nav": {
+      "howItWorks": "How It Works",
+      "project": "Chihno Project",
+      "security": "Investor Security",
+      "cares": "Azo Cares"
+    },
+    "reserveShare": "Reserve a Share",
+    "eyebrow": "Live Updates",
+    "title": "Construction",
+    "titleEmphasis": "Progress",
+    "projectLabel": "Project: Dream Smith Chihno",
+    "latest": "LATEST",
+    "photoPlaceholder": "PHOTO PLACEHOLDER",
+    "copyright": "© 2026 Dream Smith Properties Pvt. Ltd. All rights reserved."
+  },
+  "Portal": {
+    "layout": {
+      "brandPrefix": "Investor",
+      "brandSuffix": "Portal",
+      "nav": {
+        "dashboard": "My Dashboard",
+        "holdings": "My Holdings",
+        "certificates": "Certificates",
+        "documents": "Legal Documents",
+        "cares": "Azo Cares Report",
+        "notifications": "Notifications",
+        "profile": "Profile & Settings"
+      },
+      "welcome": "Welcome"
+    },
+    "dashboard": {
+      "title": "Dashboard Overview",
+      "totalSharesHeld": "Total Shares Held",
+      "acrossAllProjects": "Across all projects",
+      "totalInvested": "Total Invested",
+      "principalAmount": "Principal amount",
+      "nearestMaturity": "Nearest Maturity",
+      "buybackEligibleDate": "Buy-back eligible date",
+      "notAvailable": "N/A",
+      "recentHoldings": "My Recent Holdings",
+      "viewAll": "View All →",
+      "table": {
+        "project": "Project",
+        "shares": "Shares",
+        "purchaseDate": "Purchase Date",
+        "status": "Status"
+      },
+      "emptyState": "You do not have any confirmed holdings yet.",
+      "unknownProject": "Unknown"
+    },
+    "holdings": {
+      "title": "My Holdings",
+      "description": "A complete record of your fractional ownership investments.",
+      "emptyState": "You do not have any confirmed holdings.",
+      "unknownProject": "Unknown Project",
+      "shares": "Shares",
+      "invested": "Invested",
+      "guaranteedBuyback": "Guaranteed Buy-back",
+      "maturityDate": "Maturity Date",
+      "unit": "{count} Unit(s)",
+      "viewCertificate": "View Certificate"
+    },
+    "holdingDetail": {
+      "backToHoldings": "← Back to Holdings",
+      "unknownProject": "Unknown Project",
+      "subtitle": "Holding Details & Construction Progress",
+      "financialSummary": "Financial Summary",
+      "sharesOwned": "Shares Owned",
+      "totalInvested": "Total Invested",
+      "guaranteedBuyback": "Guaranteed Buy-back",
+      "maturityDate": "Maturity Date",
+      "viewDigitalCertificate": "View Digital Certificate",
+      "constructionProgressUpdates": "Construction Progress Updates",
+      "noUpdates": "No progress updates have been posted for this project yet.",
+      "unit": "{count} Unit(s)"
+    },
+    "certificates": {
+      "title": "My Certificates",
+      "description": "Digital copies of your Certificates of Co-Ownership.",
+      "emptyState": "You do not have any confirmed certificates yet.",
+      "certNo": "CERT NO. {id}",
+      "certificateTitle": "Certificate of Co-Ownership",
+      "holderLabel": "HOLDER",
+      "projectLabel": "PROJECT",
+      "shareLabel": "SHARE",
+      "maturesLabel": "MATURES",
+      "shareValue": "{sqft} sq. ft. ({count} Unit)",
+      "viewFull": "View Full"
+    },
+    "certificateView": {
+      "pageTitle": "Ownership Certificate",
+      "pageSubtitle": "Digital copy. Use Print to save as PDF.",
+      "notYetIssued": "Certificate not yet issued. Contact support.",
+      "downloadPdf": "Download PDF",
+      "certificateOfOwnership": "Certificate of Ownership",
+      "certifyThat": "This is to certify that",
+      "holdsText": "has successfully secured and currently holds",
+      "fractionalShares": "{count} Fractional Share(s)",
+      "inProjectKnownAs": "in the commercial development project known as",
+      "certificateId": "Certificate ID",
+      "issueDate": "Issue Date",
+      "maturityDate": "Maturity Date",
+      "guaranteedBuyback": "Guaranteed Buy-Back",
+      "authorizedSignature": "Authorized Signature",
+      "scanToVerify": "Scan to Verify Authenticity"
+    },
+    "documents": {
+      "title": "Legal Documents",
+      "description": "Reference templates and legal documentation supporting your investments.",
+      "updated": "UPDATED: {date}",
+      "format": "FORMAT: {format}",
+      "size": "SIZE: {size}",
+      "download": "Download"
+    },
+    "cares": {
+      "title": "Azo Cares Report",
+      "description": "See how your investment helps support local initiatives through our 5% profit pledge.",
+      "totalDistributed": "Total Distributed to Date",
+      "totalInitiatives": "Total Initiatives Funded",
+      "ledgerTitle": "Distribution Ledger",
+      "emptyState": "No distributions have been logged yet.",
+      "date": "Date",
+      "fundedVia": "Funded Via",
+      "unknownProject": "Unknown"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "description": "Important alerts and updates regarding your investments.",
+      "emptyState": "You don't have any notifications yet.",
+      "viewDetails": "View Details →"
+    },
+    "profile": {
+      "title": "Profile & Settings",
+      "description": "Manage your contact information and KYC details.",
+      "identityKyc": "Identity (KYC)",
+      "fullName": "Full Name",
+      "nidPassport": "NID / Passport",
+      "notAvailable": "N/A",
+      "permanentAddress": "Permanent Address",
+      "identityNotice": "Identity details cannot be changed online. To update your name or NID, please contact your account manager directly.",
+      "contactNominee": "Contact & Nominee",
+      "cancel": "Cancel",
+      "mobileNumber": "Mobile Number",
+      "emailAddress": "Email Address",
+      "nomineeName": "Nominee Name",
+      "nomineeRelation": "Nominee Relation",
+      "saving": "Saving...",
+      "saveChanges": "Save Changes",
+      "editContactDetails": "Edit Contact Details"
+    }
+  }
+}

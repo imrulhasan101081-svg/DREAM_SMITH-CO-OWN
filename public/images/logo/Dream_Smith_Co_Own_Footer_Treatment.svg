@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1010 420" width="1010" height="420">
+<defs>
+<linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0" stop-color="#F2D89D"/><stop offset=".4" stop-color="#D4AF6A"/><stop offset=".85" stop-color="#B08D4F"/><stop offset="1" stop-color="#8C6B32"/></linearGradient>
+<linearGradient id="gg" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#B08D4F"/><stop offset=".5" stop-color="#FDF2D6"/><stop offset="1" stop-color="#D4AF6A"/></linearGradient>
+<linearGradient id="n" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0E223D"/><stop offset="1" stop-color="#071120"/></linearGradient>
+<filter id="s"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-opacity=".45"/></filter>
+<style>
+.eyebrow{font-family:'IBM Plex Mono',ui-monospace,'Courier New',monospace;}
+.wordmark{font-family:'Fraunces','Georgia',serif;}
+.badge{font-family:'IBM Plex Mono',ui-monospace,'Courier New',monospace;}
+.byazo{font-family:'Fraunces','Georgia',serif;}
+.caption{font-family:'IBM Plex Mono',ui-monospace,'Courier New',monospace;}
+.credit-label{font-family:'IBM Plex Mono',ui-monospace,'Courier New',monospace;}
+.credit-brand{font-family:'Fraunces','Georgia',serif;}
+</style>
+</defs>
+<rect width="1010" height="420" fill="#0B1B32"/>
+
+<!-- PRIMARY LOCKUP -->
+<g transform="translate(130 130)" filter="url(#s)">
+<rect x="-85" y="-85" width="170" height="170" rx="14" transform="rotate(45)" fill="url(#n)" stroke="url(#g)" stroke-width="2.5"/>
+<rect x="-74" y="-74" width="148" height="148" rx="8" transform="rotate(45)" fill="none" stroke="#D4AF6A" stroke-opacity=".35" stroke-width="1.2" stroke-dasharray="4 3"/>
+<g transform="translate(0 10)">
+  <g transform="translate(-30 -44)">
+    <circle r="15" fill="url(#gg)"/>
+    <g stroke="#D4AF6A" stroke-width="3.4" stroke-linecap="round">
+      <path d="M0-24V-33"/><path d="M18-14L25-21"/><path d="M-18-14L-25-21"/>
+      <path d="M24 0H33"/><path d="M-24 0H-33"/><path d="M17 12L23 18"/>
+    </g>
+  </g>
+  <g transform="translate(30 -22)" fill="#D4AF6A">
+    <path d="M-3 40Q-7 18-1 -2Q4 18 2 40Z"/>
+    <path d="M0-2C-10-10-24-9-32 0C-22 4-10 3 0-2Z"/>
+    <path d="M0-2C-6-16-16-24-28-22C-21-12-10-6 0-2Z"/>
+    <path d="M0-2C6-16 16-24 28-22C21-12 10-6 0-2Z"/>
+    <path d="M0-2C10-10 24-9 32 0C22 4 10 3 0-2Z"/>
+    <path d="M0-2C2-14 10-20 20-18C15-10 7-4 0-2Z"/>
+  </g>
+  <path d="M-48 12L-14-17L22 12Z" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M3-3V-15H12V3" fill="none" stroke="#fff" stroke-width="3"/>
+  <g transform="translate(-19 -3)"><rect width="11" height="11" rx="1.5" fill="url(#g)"/></g>
+  <path d="M-60 24Q-10 4 52 26C20 18-25 17-60 24Z" fill="url(#g)"/>
+  <path d="M-52 32Q-10 14 44 34C15 26-22 25-52 32Z" fill="#fff" opacity=".55"/>
+</g>
+<g fill="#D4AF6A"><circle cy="-104" r="3"/><circle cx="104" r="3"/><circle cy="104" r="3"/><circle cx="-104" r="3"/></g>
+</g>
+<g transform="translate(265 55)"><line y1="8" y2="140" stroke="#B08D4F" stroke-opacity=".3" stroke-width="1.5"/><polygon points="0,67 4.5,74 0,81 -4.5,74" fill="#D4AF6A"/></g>
+<g transform="translate(295 100)">
+<text class="eyebrow" y="-12" font-size="10" letter-spacing="2.4" font-weight="500" fill="#D4AF6A">A DREAM SMITH PROPERTIES VENTURE · EST. 2011</text>
+<text class="wordmark" y="34" font-size="42" font-weight="600" letter-spacing="0.5" fill="#F7F3EA">Dream Smith</text>
+<g transform="translate(0 48)">
+  <rect width="128" height="28" rx="3" fill="url(#g)"/>
+  <text class="badge" x="64" y="19" text-anchor="middle" font-size="14.5" font-weight="700" letter-spacing="3" fill="#071120">CO-OWN</text>
+  <text class="byazo" x="150" y="20" font-size="18" font-weight="500" font-style="italic" fill="#D4AF6A">by AZO</text>
+  <line x1="230" y1="1" x2="230" y2="27" stroke="#B08D4F" stroke-opacity=".35"/>
+  <text class="caption" x="246" y="12" font-size="9.5" letter-spacing="2" font-weight="600" fill="#F7F3EA">DREAM SMITH PROPERTIES</text>
+  <text class="caption" x="246" y="24" font-size="9" letter-spacing="1.5" fill="#8F9AAB">REAL ESTATE · FRACTIONAL ASSETS</text>
+</g>
+<line y1="90" x2="630" y2="90" stroke="#B08D4F" stroke-opacity=".2"/>
+</g>
+
+<!-- SEPARATOR -->
+<line x1="30" y1="290" x2="980" y2="290" stroke="#B08D4F" stroke-opacity=".15"/>
+
+<!-- AZO PLATFORM CREDIT — quiet, secondary, footer-scale -->
+<g transform="translate(30 320)">
+  <g transform="translate(30 45)">
+    <g fill="#B08D4F" opacity=".85">
+      <ellipse cx="0" cy="-24" rx="5" ry="8"/>
+      <ellipse cx="15" cy="-19" rx="5" ry="8" transform="rotate(40 15 -19)"/>
+      <ellipse cx="21" cy="-6" rx="5" ry="8" transform="rotate(80 21 -6)"/>
+      <ellipse cx="15" cy="9" rx="5" ry="8" transform="rotate(120 15 9)"/>
+      <ellipse cx="0" cy="14" rx="5" ry="8" transform="rotate(160 0 14)"/>
+      <ellipse cx="-15" cy="9" rx="5" ry="8" transform="rotate(200 -15 9)"/>
+      <ellipse cx="-21" cy="-6" rx="5" ry="8" transform="rotate(240 -21 -6)"/>
+      <ellipse cx="-15" cy="-19" rx="5" ry="8" transform="rotate(280 -15 -19)"/>
+    </g>
+    <path d="M0 -6C-3 -9 -3 -13 0 -13C3 -13 3 -9 0 -6Z
+             M0 -6C4 -2 8 2 6 10C4 6 1 3 0 0
+             C-1 3 -4 6 -8 8C-9 4 -4 -2 0 -6Z"
+          fill="#F7F3EA" opacity=".85"/>
+  </g>
+  <g transform="translate(70 30)">
+    <text class="credit-label" y="-4" font-size="8.5" letter-spacing="1.8" font-weight="500" fill="#8F9AAB">PART OF THE</text>
+    <text class="credit-brand" y="20" font-size="20" font-weight="600" fill="#F7F3EA">AZO</text>
+    <text class="credit-label" x="48" y="18" font-size="10.5" letter-spacing="0.5" fill="#8F9AAB">Platform</text>
+    <text class="credit-label" y="36" font-size="7.5" letter-spacing="0.6" fill="#5A6472" font-style="italic">From Dream to Door — AZO Brings It All Home</text>
+  </g>
+</g>
+</svg>
