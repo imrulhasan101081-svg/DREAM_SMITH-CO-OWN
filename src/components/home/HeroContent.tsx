@@ -103,17 +103,17 @@ export default function HeroContent({
 
           {/* Primary Action Buttons */}
           <Reveal delay={340} y={20}>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
+            <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 max-w-[440px] sm:max-w-none">
               <Link
                 href="/apply"
-                className="btn-gold px-9 py-4 text-[14px] font-semibold tracking-wider uppercase group"
+                className="btn-gold px-9 py-4 text-[14px] font-semibold tracking-wider uppercase group text-center justify-center"
               >
                 <span>{tReserveShare}</span>
                 <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </Link>
               <Link
                 href="/how-it-works"
-                className="btn-outline px-8 py-4 text-[14px] tracking-wide"
+                className="btn-outline px-8 py-4 text-[14px] tracking-wide text-center justify-center"
               >
                 {tSeeHowItWorks}
               </Link>
@@ -124,9 +124,9 @@ export default function HeroContent({
         {/* High-Precision Institutional Stat Rail */}
         <motion.div
           style={{ y: statsY }}
-          className="mt-16 md:mt-24 border-t border-ivory/15 pt-8 bg-gradient-to-r from-navy-deep/60 via-navy-deep/40 to-transparent backdrop-blur-sm -mx-6 px-6 md:-mx-12 md:px-12"
+          className="mt-14 md:mt-24 border-t border-ivory/15 pt-8 bg-gradient-to-r from-navy-deep/60 via-navy-deep/40 to-transparent backdrop-blur-sm -mx-6 px-6 md:-mx-12 md:px-12"
         >
-          <dl className="grid grid-cols-2 lg:grid-cols-4 gap-y-6 lg:gap-y-0 max-w-[1360px] mx-auto">
+          <dl className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 sm:gap-x-8 gap-y-6 lg:gap-y-0 max-w-[1360px] mx-auto">
             {[
               { v: stats.price, k: stats.priceLabel, sub: 'Notarized Stamp Agreement' },
               { v: stats.term, k: stats.termLabel, suffix: stats.termSuffix, sub: '30 Mo Build + 6 Mo Settlement' },

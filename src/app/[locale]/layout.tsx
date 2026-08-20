@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Cormorant_Garamond, JetBrains_Mono } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
@@ -26,6 +26,17 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#F9F7F1" },
+    { media: "(prefers-color-scheme: dark)", color: "#040914" },
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXTAUTH_URL || "http://localhost:3000"),
   title: "Dream Smith Co-Own",
@@ -34,16 +45,6 @@ export const metadata: Metadata = {
     icon: "/images/logo/official-logo-icon.png",
     apple: "/images/logo/official-logo-icon.png",
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-    viewportFit: "cover",
-  },
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#F9F7F1" },
-    { media: "(prefers-color-scheme: dark)", color: "#040914" },
-  ],
   openGraph: {
     title: "Dream Smith Co-Own",
     description: "Fractional Real Estate Co-Ownership Platform",

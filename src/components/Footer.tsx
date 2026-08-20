@@ -10,7 +10,7 @@ export default function Footer() {
     <footer id="contact" className="bg-navy-deep text-ivory/50 py-10 md:py-14 pb-6 md:pb-7 text-[13px]">
       <div className="max-w-[1180px] mx-auto px-5 sm:px-8">
         <div className="grid grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr] gap-8 md:gap-10 mb-8 md:mb-10">
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <div className="flex flex-col text-ivory mb-5">
               <Link href="/" className="inline-block mb-3 transition-opacity hover:opacity-90">
                 <Image
