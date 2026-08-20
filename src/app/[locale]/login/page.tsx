@@ -48,10 +48,10 @@ export default function InvestorLoginPage() {
             <Image
               src="/images/logo/official-logo-full.png"
               alt="Dream Smith Co-Own"
-              width={220}
-              height={50}
+              width={280}
+              height={75}
               priority
-              className="h-12 w-auto object-contain mx-auto"
+              className="h-16 md:h-20 w-auto object-contain mx-auto"
             />
           </Link>
         </div>

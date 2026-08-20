@@ -62,10 +62,10 @@ export default function VerifyPage({ params }: { params: { certificateId?: strin
             <Image
               src="/images/logo/official-logo-full.png"
               alt="Dream Smith Co-Own"
-              width={200}
-              height={48}
+              width={260}
+              height={70}
               priority
-              className="h-10 md:h-11 w-auto object-contain"
+              className="h-12 md:h-15 w-auto object-contain"
             />
           </Link>
           <div className="flex items-center gap-4">

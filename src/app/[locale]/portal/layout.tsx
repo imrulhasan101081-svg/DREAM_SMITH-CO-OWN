@@ -39,9 +39,9 @@ export default async function PortalLayout({
             <Image
               src="/images/logo/official-logo-full.png"
               alt="Dream Smith Co-Own"
-              width={180}
-              height={40}
-              className="h-9 w-auto object-contain"
+              width={220}
+              height={55}
+              className="h-11 w-auto object-contain"
             />
           </Link>
         </div>
@@ -90,9 +90,9 @@ export default async function PortalLayout({
           <Image
             src="/images/logo/official-logo-full.png"
             alt="Dream Smith Co-Own"
-            width={160}
-            height={36}
-            className="h-8 w-auto object-contain"
+            width={200}
+            height={50}
+            className="h-10 w-auto object-contain"
           />
         </Link>
         <div className="flex items-center gap-3">

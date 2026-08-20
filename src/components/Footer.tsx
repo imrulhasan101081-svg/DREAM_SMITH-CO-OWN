@@ -16,9 +16,9 @@ export default function Footer() {
                 <Image
                   src="/images/logo/official-logo-full.png"
                   alt="Dream Smith Co-Own"
-                  width={200}
-                  height={48}
-                  className="h-11 w-auto object-contain"
+                  width={260}
+                  height={65}
+                  className="h-14 md:h-16 w-auto object-contain"
                 />
               </Link>
               <div className="pt-2.5 border-t border-gold/15 flex items-center gap-2 max-w-[280px]">

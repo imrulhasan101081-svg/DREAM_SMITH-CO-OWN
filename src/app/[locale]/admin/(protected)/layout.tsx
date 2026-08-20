@@ -28,9 +28,9 @@ export default async function AdminProtectedLayout({
             <Image
               src="/images/logo/official-logo-full.png"
               alt="Dream Smith Co-Own Admin"
-              width={180}
-              height={40}
-              className="h-9 w-auto object-contain"
+              width={220}
+              height={55}
+              className="h-11 w-auto object-contain"
             />
           </Link>
         </div>

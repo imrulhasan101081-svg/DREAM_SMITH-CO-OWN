@@ -51,10 +51,10 @@ export default function Header() {
             <Image
               src="/images/logo/official-logo-full.png"
               alt="Dream Smith Co-Own"
-              width={220}
-              height={73}
+              width={280}
+              height={90}
               priority
-              className="h-10 md:h-12 w-auto object-contain"
+              className="h-12 md:h-16 w-auto object-contain"
             />
           </Link>
 
@@ -107,10 +107,10 @@ export default function Header() {
               <Image
                 src="/images/logo/official-logo-full.png"
                 alt="Dream Smith Co-Own"
-                width={180}
-                height={60}
+                width={220}
+                height={73}
                 priority
-                className="h-9 w-auto object-contain"
+                className="h-11 w-auto object-contain"
               />
             </Link>
             <button
