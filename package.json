@@ -10,6 +10,7 @@
     "test:concurrency": "node scripts/test-share-cap.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "bcryptjs": "^3.0.3",
     "framer-motion": "^13.1.0",
     "mongoose": "^9.9.3",
