@@ -34,6 +34,16 @@ export const metadata: Metadata = {
     icon: "/images/logo/official-logo-icon.png",
     apple: "/images/logo/official-logo-icon.png",
   },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+    viewportFit: "cover",
+  },
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#F9F7F1" },
+    { media: "(prefers-color-scheme: dark)", color: "#040914" },
+  ],
   openGraph: {
     title: "Dream Smith Co-Own",
     description: "Fractional Real Estate Co-Ownership Platform",
@@ -74,6 +84,7 @@ export default async function RootLayout({
       </head>
       <body
         className={`${plusJakartaSans.variable} ${cormorantGaramond.variable} ${jetbrainsMono.variable} antialiased bg-ivory text-ink font-sans selection:bg-gold selection:text-navy-deep`}
+        style={{ WebkitTapHighlightColor: 'transparent' }}
       >
         <NextIntlClientProvider messages={messages}>
           {children}

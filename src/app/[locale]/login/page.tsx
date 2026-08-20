@@ -41,7 +41,7 @@ export default function InvestorLoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-navy flex items-center justify-center p-4">
+    <div className="min-h-screen bg-navy flex items-center justify-center p-4 sm:p-6">
       <div className="w-full max-w-md">
         <div className="text-center mb-6">
           <Link href="/" className="inline-block transition-opacity hover:opacity-90">
@@ -56,7 +56,7 @@ export default function InvestorLoginPage() {
           </Link>
         </div>
 
-        <div className="bg-white rounded-sm shadow-xl p-10">
+        <div className="bg-white rounded-sm shadow-xl p-6 sm:p-8 md:p-10">
           <div className="text-center mb-8">
             <h1 className="font-serif text-[26px] text-navy mb-2">{t('title')}</h1>
             <p className="text-ink/60 text-[14px]">{t('subtitle')}</p>

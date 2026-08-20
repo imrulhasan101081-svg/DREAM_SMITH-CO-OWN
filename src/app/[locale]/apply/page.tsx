@@ -70,8 +70,8 @@ export default function ApplyPage() {
         </nav>
       </header>
 
-      <section className="py-24">
-        <div className="max-w-[700px] mx-auto px-8">
+      <section className="py-12 sm:py-16 md:py-24">
+        <div className="max-w-[700px] mx-auto px-4 sm:px-6 md:px-8">
           {submitted ? (
             <div className="bg-white border border-sage/30 rounded-sm p-12 text-center shadow-sm">
               <div className="w-20 h-20 bg-sage/10 text-sage rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">✓</div>
@@ -84,7 +84,7 @@ export default function ApplyPage() {
               </Link>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="bg-white border border-line-light p-10 rounded-sm shadow-sm">
+            <form onSubmit={handleSubmit} className="bg-white border border-line-light p-6 sm:p-8 md:p-10 rounded-sm shadow-sm">
               <span className="font-mono text-[12px] tracking-[0.14em] text-gold uppercase mb-2 block">{t('stepLabel')}</span>
               <h1 className="font-serif text-[36px] text-navy mb-8">{t('title')}</h1>
 
@@ -114,7 +114,7 @@ export default function ApplyPage() {
                   <input required type="text" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} className="w-full border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold transition-colors text-[15px]" placeholder={t('fullNamePlaceholder')} />
                 </div>
 
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label className="block text-[13px] font-medium text-navy mb-2">{t('mobileNumber')}</label>
                     <input required type="tel" value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})} className="w-full border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold transition-colors text-[15px]" placeholder={t('mobileNumberPlaceholder')} />
