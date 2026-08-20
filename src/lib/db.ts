@@ -31,8 +31,8 @@ async function dbConnect() {
 
         console.warn("Local MongoDB unavailable, falling back to an in-memory database (dev only):", err.message);
         try {
-          const { MongoMemoryServer } = await import("mongodb-memory-server");
-          const mongoServer = await MongoMemoryServer.create();
+          const { MongoMemoryReplSet } = await import("mongodb-memory-server");
+          const mongoServer = await MongoMemoryReplSet.create({ replSet: { count: 1 } });
           const memUri = mongoServer.getUri();
           console.log("In-memory MongoDB started at:", memUri);
           const conn = await mongoose.connect(memUri, { bufferCommands: false });

@@ -47,6 +47,34 @@ export async function GET(req: Request) {
     results.superAdmin = "Super Admin already exists";
   }
 
+  // ─── 1.5. TEST INVESTOR ───────────────────────────────────────────────────
+  const Investor = (await import("@/lib/models/Investor")).default;
+  const bcrypt = (await import("bcryptjs")).default;
+  
+  let testInvestor = await Investor.findOne({
+    login_email: "investor@dreamsmith.com",
+  });
+
+  if (!testInvestor) {
+    testInvestor = await Investor.create({
+      login_email: "investor@dreamsmith.com",
+      password_hash: await bcrypt.hash("password123", 10),
+      name: "Test Investor",
+      email: "investor@dreamsmith.com",
+      contact: "01700000000",
+      address: "Rajshahi",
+      nid_number: "1234567890",
+      nid_hash: "1234567890",
+      nominee_name: "Test Nominee",
+      nominee_relation: "Brother",
+      nominee_contact: "01800000000",
+      bank_details: "Test Bank, A/C: 1234",
+    });
+    results.investor = "Created Test Investor: investor@dreamsmith.com";
+  } else {
+    results.investor = "Test Investor already exists";
+  }
+
   // ─── 2. PROJECT — Dream Smith Chihno ──────────────────────────────────────
   let chihno = await Project.findOne({ slug: "chihno" });
   if (!chihno) {
@@ -103,8 +131,37 @@ export async function GET(req: Request) {
       },
     });
     results.project = "Created Dream Smith Chihno project";
-  } else {
     results.project = "Dream Smith Chihno already exists";
+  }
+
+  // ─── 2.5 TEST HOLDING & CERTIFICATE ───────────────────────────────────────
+  const Holding = (await import("@/lib/models/Holding")).default;
+  const Certificate = (await import("@/lib/models/Certificate")).default;
+
+  let testHolding = await Holding.findOne({ investor_id: testInvestor._id });
+  if (!testHolding) {
+    testHolding = await Holding.create({
+      investor_id: testInvestor._id,
+      project_id: chihno._id,
+      share_count: 5,
+      purchase_date: new Date(),
+      maturity_date: new Date(new Date().setFullYear(new Date().getFullYear() + 3)),
+      agreement_ref: "AGR-TEST-001",
+      cheque_ref: "CHQ-TEST-001",
+      status: "active",
+    });
+    results.holding = "Created Test Holding";
+  }
+
+  const existingCert = await Certificate.findOne({ holding_id: testHolding._id });
+  if (!existingCert) {
+    await Certificate.create({
+      certificate_id: "DSCO-CERT-TEST-001",
+      holding_id: testHolding._id,
+      qr_verification_hash: "test-hash-12345",
+      issue_date: new Date(),
+    });
+    results.certificate = "Created Test Certificate";
   }
 
   // ─── 3. APPLICATIONS (sample data for dev) ──────────────────────────────

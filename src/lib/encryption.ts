@@ -1,6 +1,6 @@
 import crypto from "crypto";
 
-const rawKey = process.env.ENCRYPTION_KEY;
+const rawKey = process.env.ENCRYPTION_KEY?.trim();
 if (!rawKey || Buffer.byteLength(rawKey, "utf8") !== 32) {
   throw new Error(
     "ENCRYPTION_KEY environment variable must be set to an exact 32-byte string (see .env.example)."

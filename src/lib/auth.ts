@@ -108,12 +108,24 @@ export const authOptions = {
       // Handle Google OAuth — only allow pre-authorized Super Admin emails
       if (account?.provider === "google") {
         await dbConnect();
-        const adminRecord = await AdminUser.findOne({
+        let adminRecord = await AdminUser.findOne({
           email: user.email?.toLowerCase(),
           role: "SUPER_ADMIN",
           isActive: true,
           deletedAt: null,
         });
+
+        // Developer QoL: Auto-provision any Google login as Super Admin when running locally
+        if (!adminRecord && process.env.NODE_ENV === "development") {
+          adminRecord = await AdminUser.create({
+            email: user.email?.toLowerCase(),
+            name: user.name || "Dev Super Admin",
+            role: "SUPER_ADMIN",
+            isActive: true,
+            permissions: ["*"],
+          });
+          console.log(`[DEV] Auto-provisioned Super Admin: ${user.email}`);
+        }
 
         if (!adminRecord) {
           // Not a pre-authorized Super Admin — redirect to unauthorized page

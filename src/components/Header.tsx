@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import BrandLockup from '@/components/brand/BrandLockup';
+import Image from 'next/image';
 
 import LocaleSwitcher from '@/components/LocaleSwitcher';
 
@@ -43,12 +43,19 @@ export default function Header() {
         className={`sticky top-0 z-50 border-b transition-[background-color,border-color,padding] duration-500 ${
           condensed
             ? 'bg-navy-deep/95 backdrop-blur-md border-gold/20 py-2'
-            : 'bg-navy border-transparent py-3.5'
+            : 'bg-navy border-transparent py-3'
         }`}
       >
         <nav className="flex items-center justify-between gap-6 px-6 md:px-10 max-w-[1320px] mx-auto">
-          <Link href="/" aria-label="Dream Smith Co-Own — home">
-            <BrandLockup size="md" variant="dark" showEyebrow={!condensed} />
+          <Link href="/" aria-label="Dream Smith Co-Own — home" className="flex items-center shrink-0 py-1 transition-opacity hover:opacity-90">
+            <Image
+              src="/images/logo/official-logo-full.png"
+              alt="Dream Smith Co-Own"
+              width={220}
+              height={73}
+              priority
+              className="h-10 md:h-12 w-auto object-contain"
+            />
           </Link>
 
           <div className="hidden lg:flex gap-8 items-center">
@@ -96,8 +103,15 @@ export default function Header() {
       {open && (
         <div className="fixed inset-0 z-40 lg:hidden flex flex-col bg-navy-deep/98 backdrop-blur-xl pt-16 px-8 pb-12 overflow-y-auto animate-fade-in">
           <div className="flex items-center justify-between pb-6 mb-4 border-b border-gold/15">
-            <Link href="/" onClick={() => setOpen(false)}>
-              <BrandLockup size="sm" variant="dark" />
+            <Link href="/" onClick={() => setOpen(false)} className="flex items-center shrink-0">
+              <Image
+                src="/images/logo/official-logo-full.png"
+                alt="Dream Smith Co-Own"
+                width={180}
+                height={60}
+                priority
+                className="h-9 w-auto object-contain"
+              />
             </Link>
             <button
               onClick={() => setOpen(false)}
