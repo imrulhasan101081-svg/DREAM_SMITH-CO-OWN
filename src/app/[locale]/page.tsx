@@ -5,6 +5,7 @@ import dynamicImport from 'next/dynamic';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Hero from '@/components/home/Hero';
+import ValuePillarsStrip from '@/components/home/ValuePillarsStrip';
 import TrackRecord from '@/components/home/TrackRecord';
 import Reveal from '@/components/motion/Reveal';
 import Parallax from '@/components/motion/Parallax';
@@ -80,6 +81,9 @@ export default async function Home() {
       <Header />
 
       <Hero totalShares={totalShares} reservedShares={reservedShares} />
+
+      {/* ── INSTITUTIONAL VALUE PILLARS STRIP ───────────────────────────── */}
+      <ValuePillarsStrip />
 
       {/* ── THE MODEL ────────────────────────────────────────────────────── */}
       <section id="how" className="py-20 md:py-28 content-visibility-auto">
