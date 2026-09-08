@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 
 export default function DeedSpecimen() {
@@ -65,12 +66,32 @@ export default function DeedSpecimen() {
       {activeTab === 'deed' && (
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Visual Certificate Frame */}
-          <div className="lg:col-span-7 bg-navy-deep text-ivory border-2 border-gold/40 p-6 sm:p-8 rounded-sm relative shadow-2xl corner-ticks">
+          <div className="lg:col-span-7 bg-navy-deep text-ivory border-2 border-gold/40 p-6 sm:p-8 rounded-sm relative shadow-2xl corner-ticks overflow-hidden">
+            {/* Background Official Sovereign Seal Watermark */}
+            <div 
+              className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.05] overflow-hidden"
+              aria-hidden="true"
+            >
+              <Image
+                src="/images/logo/official-logo-icon.png"
+                alt=""
+                width={380}
+                height={380}
+                className="object-contain scale-110"
+              />
+            </div>
+
             {/* Guilloché Header Band */}
-            <div className="flex justify-between items-center pb-6 border-b border-gold/25">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full border border-gold flex items-center justify-center font-serif text-gold text-[16px] font-normal italic">
-                  DS
+            <div className="flex justify-between items-center pb-6 border-b border-gold/25 relative z-10">
+              <div className="flex items-center gap-3.5">
+                <div className="w-11 h-11 rounded-full border border-gold/60 p-1 flex items-center justify-center bg-navy shadow-inner shrink-0 overflow-hidden">
+                  <Image
+                    src="/images/logo/official-logo-icon.png"
+                    alt="Dream Smith Official Logo"
+                    width={38}
+                    height={38}
+                    className="object-contain"
+                  />
                 </div>
                 <div>
                   <div className="eyebrow text-gold-bright text-[10px] tracking-[0.2em] font-bold">
@@ -87,7 +108,7 @@ export default function DeedSpecimen() {
             </div>
 
             {/* Certificate Body */}
-            <div className="py-6 space-y-4">
+            <div className="py-6 space-y-4 relative z-10">
               <div className="text-center py-2">
                 <div className="font-serif italic text-[14px] text-gold/80 mb-1">Official Specimen</div>
                 <div className="font-serif text-[clamp(20px,2.2vw,28px)] text-ivory tracking-wide uppercase">
@@ -131,9 +152,23 @@ export default function DeedSpecimen() {
             </div>
 
             {/* Official Stamp & Signatures */}
-            <div className="pt-4 border-t border-ivory/10 flex justify-between items-center text-[10px] font-mono text-ivory/40">
-              <span>LEGAL ESCROW AGENT: DUAL-KEY BANK TRUST</span>
-              <span className="text-gold/70">STAMP: GOVT. SEAL APPROVED</span>
+            <div className="pt-4 border-t border-ivory/10 flex flex-wrap justify-between items-center gap-3 text-[10px] font-mono text-ivory/50 relative z-10">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-gold animate-pulse" />
+                <span>LEGAL ESCROW AGENT: DUAL-KEY BANK TRUST</span>
+              </div>
+              <div className="flex items-center gap-2 bg-gold/10 border border-gold/30 px-2.5 py-1 rounded-sm text-gold-bright">
+                <div className="w-4 h-4 rounded-full overflow-hidden shrink-0 flex items-center justify-center">
+                  <Image
+                    src="/images/logo/official-logo-icon.png"
+                    alt="Seal"
+                    width={16}
+                    height={16}
+                    className="object-contain"
+                  />
+                </div>
+                <span className="tracking-wider uppercase text-[9px]">OFFICIAL CORPORATE SEAL APPROVED</span>
+              </div>
             </div>
           </div>
 
