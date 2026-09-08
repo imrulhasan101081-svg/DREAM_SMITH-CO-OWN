@@ -10,10 +10,10 @@ const config: Config = {
     extend: {
       colors: {
         navy: {
-          DEFAULT: "#0B1B32",
-          deep: "#040914",
-          surface: "#0e2038",
-          card: "#091527",
+          DEFAULT: "#061224",
+          deep: "#02050B",
+          surface: "#0B192E",
+          card: "#06101F",
         },
         ivory: {
           DEFAULT: "#F9F7F1",
@@ -21,25 +21,25 @@ const config: Config = {
           muted: "#E2DAC8",
         },
         gold: {
-          DEFAULT: "#C5A869",
-          bright: "#E2C889",
-          muted: "rgba(197, 168, 105, 0.15)",
-          deep: "#9E8043",
+          DEFAULT: "#D4AF37",
+          bright: "#F5D27B",
+          muted: "rgba(212, 175, 55, 0.20)",
+          deep: "#8F6E27",
         },
         ink: {
-          DEFAULT: "#12140F",
-          muted: "#4A4D46",
-          subtle: "#7A7D75",
+          DEFAULT: "#070906",
+          muted: "#2E312B",
+          subtle: "#5A5D55",
         },
         sage: {
-          DEFAULT: "#4A6B50",
-          dim: "#E9EFE9",
-          dark: "#2D4432",
+          DEFAULT: "#3D5A42",
+          dim: "#E4ECE4",
+          dark: "#233827",
         },
         line: {
-          DEFAULT: "rgba(197, 168, 105, 0.22)",
-          light: "rgba(11, 27, 50, 0.08)",
-          dark: "rgba(255, 255, 255, 0.07)",
+          DEFAULT: "rgba(212, 175, 55, 0.32)",
+          light: "rgba(7, 9, 6, 0.12)",
+          dark: "rgba(255, 255, 255, 0.12)",
         }
       },
       fontFamily: {
@@ -49,8 +49,8 @@ const config: Config = {
         mono: ['var(--font-mono)', 'monospace'],
       },
       backgroundImage: {
-        'gold-shimmer': 'linear-gradient(135deg, #C5A869 0%, #F5E7C8 50%, #9E8043 100%)',
-        'glass-gradient': 'linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%)',
+        'gold-shimmer': 'linear-gradient(135deg, #F5D27B 0%, #D4AF37 50%, #8F6E27 100%)',
+        'glass-gradient': 'linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%)',
       },
     },
   },

@@ -4,21 +4,22 @@
 
 @layer base {
   :root {
-    --navy: #0B1B32;
-    --navy-deep: #040914;
-    --navy-surface: #0E2038;
-    --navy-card: #091527;
+    --navy: #061224;
+    --navy-deep: #02050B;
+    --navy-surface: #0B192E;
+    --navy-card: #06101F;
     --ivory: #F9F7F1;
     --ivory-dim: #EFE9DA;
-    --gold: #C5A869;
-    --gold-bright: #E2C889;
-    --gold-deep: #9E8043;
-    --gold-muted: rgba(197, 168, 105, 0.14);
-    --ink: #12140F;
-    --sage: #4A6B50;
-    --sage-dim: #E9EFE9;
-    --line: rgba(197, 168, 105, 0.22);
-    --line-light: rgba(11, 27, 50, 0.08);
+    --gold: #D4AF37;
+    --gold-bright: #F5D27B;
+    --gold-deep: #8F6E27;
+    --gold-muted: rgba(212, 175, 55, 0.20);
+    --ink: #070906;
+    --ink-muted: #2E312B;
+    --sage: #3D5A42;
+    --sage-dim: #E4ECE4;
+    --line: rgba(212, 175, 55, 0.32);
+    --line-light: rgba(7, 9, 6, 0.12);
 
     /* Motion — international luxury easing */
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -48,10 +49,11 @@
     background: var(--ivory);
     color: var(--ink);
     line-height: 1.6;
+    font-weight: 450;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
     /* iOS safe area support for notch/home bar */
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
@@ -60,6 +62,11 @@
     text-size-adjust: 100%;
     /* Smooth momentum scrolling on iOS */
     -webkit-overflow-scrolling: touch;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-serif, .font-display {
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
 
   /* Minimum tap target size for accessibility on mobile (Apple HIG: 44px) */
