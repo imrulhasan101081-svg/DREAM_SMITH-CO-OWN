@@ -1,17 +1,38 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
+import dynamicImport from 'next/dynamic';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Hero from '@/components/home/Hero';
 import TrackRecord from '@/components/home/TrackRecord';
-import InvestmentCalculator from '@/components/home/InvestmentCalculator';
-import DeedSpecimen from '@/components/home/DeedSpecimen';
 import Reveal from '@/components/motion/Reveal';
 import Parallax from '@/components/motion/Parallax';
 import dbConnect from '@/lib/db';
 import Project from '@/lib/models/Project';
 import Application from '@/lib/models/Application';
+
+const InvestmentCalculator = dynamicImport(() => import('@/components/home/InvestmentCalculator'), {
+  loading: () => (
+    <div className="bg-navy border border-gold/30 rounded-sm p-10 min-h-[360px] flex items-center justify-center animate-pulse">
+      <div className="flex flex-col items-center gap-3">
+        <div className="w-6 h-6 rounded-full border-2 border-gold border-t-transparent animate-spin" />
+        <span className="eyebrow text-[9.5px] text-gold-bright tracking-widest">LOADING SIMULATOR // EQUITY ALLOCATION</span>
+      </div>
+    </div>
+  ),
+});
+
+const DeedSpecimen = dynamicImport(() => import('@/components/home/DeedSpecimen'), {
+  loading: () => (
+    <div className="bg-navy-card border border-gold/30 rounded-sm p-10 min-h-[400px] flex items-center justify-center animate-pulse">
+      <div className="flex flex-col items-center gap-3">
+        <div className="w-6 h-6 rounded-full border-2 border-gold border-t-transparent animate-spin" />
+        <span className="eyebrow text-[9.5px] text-gold-bright tracking-widest">INITIALIZING LEGAL SPECIMEN LEDGER</span>
+      </div>
+    </div>
+  ),
+});
 import tower from '../../../public/images/chihno/tower.jpg';
 import entrance from '../../../public/images/chihno/entrance.jpg';
 import detail from '../../../public/images/chihno/detail.jpg';
@@ -61,7 +82,7 @@ export default async function Home() {
       <Hero totalShares={totalShares} reservedShares={reservedShares} />
 
       {/* ── THE MODEL ────────────────────────────────────────────────────── */}
-      <section id="how" className="py-20 md:py-28">
+      <section id="how" className="py-20 md:py-28 content-visibility-auto">
         <div className="max-w-[1320px] mx-auto px-6 md:px-10">
           <Reveal>
             <div className="grid md:grid-cols-[minmax(0,340px)_1fr] gap-10 md:gap-20 mb-14 md:mb-20 items-end">
@@ -111,7 +132,7 @@ export default async function Home() {
       </section>
 
       {/* ── INVESTMENT STRUCTURE ─────────────────────────────────────────── */}
-      <section id="structure" className="bg-navy-deep text-ivory py-20 md:py-28">
+      <section id="structure" className="bg-navy-deep text-ivory py-20 md:py-28 content-visibility-auto">
         <div className="max-w-[1320px] mx-auto px-6 md:px-10">
           <Reveal>
             <div className="flex items-center gap-3.5 mb-6">
@@ -225,7 +246,7 @@ export default async function Home() {
       </section>
 
       {/* ── PROJECT SHOWCASE ─────────────────────────────────────────────── */}
-      <section id="project" className="bg-ivory py-20 md:py-28 overflow-hidden">
+      <section id="project" className="bg-ivory py-20 md:py-28 overflow-hidden content-visibility-auto">
         <div className="max-w-[1320px] mx-auto px-6 md:px-10">
           <Reveal>
             <div className="grid md:grid-cols-[minmax(0,380px)_1fr] gap-10 md:gap-20 items-end mb-14 md:mb-18">
@@ -338,7 +359,7 @@ export default async function Home() {
       <TrackRecord />
 
       {/* ── INVESTOR PROTECTION ──────────────────────────────────────────── */}
-      <section id="security" className="py-20 md:py-28">
+      <section id="security" className="py-20 md:py-28 content-visibility-auto">
         <div className="max-w-[1320px] mx-auto px-6 md:px-10">
           <Reveal>
             <div className="grid md:grid-cols-[minmax(0,380px)_1fr] gap-10 md:gap-20 items-end mb-14 md:mb-18">
@@ -389,7 +410,7 @@ export default async function Home() {
       </section>
 
       {/* ── AZO CARES ────────────────────────────────────────────────────── */}
-      <section id="cares" className="bg-sage-dim py-20 md:py-24 border-y border-sage/20">
+      <section id="cares" className="bg-sage-dim py-20 md:py-24 border-y border-sage/20 content-visibility-auto">
         <div className="max-w-[1320px] mx-auto px-6 md:px-10">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <Reveal>
@@ -437,7 +458,7 @@ export default async function Home() {
       </section>
 
       {/* ── TRUST STRIP ──────────────────────────────────────────────────── */}
-      <div className="bg-navy">
+      <div className="bg-navy content-visibility-auto">
         <div className="max-w-[1320px] mx-auto px-6 md:px-10 py-12">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {(['since2011', 'rjsc', 'notarized', 'location'] as const).map((item, i) => (
@@ -460,7 +481,7 @@ export default async function Home() {
       </div>
 
       {/* ── CLOSING ──────────────────────────────────────────────────────── */}
-      <section id="apply" className="relative bg-navy-deep text-ivory overflow-hidden">
+      <section id="apply" className="relative bg-navy-deep text-ivory overflow-hidden content-visibility-auto">
         <div className="absolute inset-0 opacity-25">
           <Parallax distance={70} scale={1.12} className="absolute inset-0">
             <Image

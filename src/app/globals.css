@@ -299,7 +299,7 @@
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--ink-muted);
+    color: var(--gold);
     line-height: 1;
   }
 
@@ -318,4 +318,44 @@
     font-feature-settings: 'tnum' 1, 'lnum' 1;
     font-kerning: normal;
   }
+
+  /* GPU-accelerated rendering optimization for below-the-fold content */
+  .content-visibility-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 750px;
+  }
+}
+
+/* ── Hardware-Accelerated Animation Keyframes ───────────────────────────── */
+@keyframes heroKenBurns {
+  0% {
+    transform: scale3d(1.03, 1.03, 1) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale3d(1.11, 1.11, 1) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideProgress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-ken-burns {
+  animation: heroKenBurns 7.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.animate-slide-progress {
+  animation: slideProgress 6.5s linear forwards;
+  will-change: width;
+}
+
+.animation-paused {
+  animation-play-state: paused !important;
 }

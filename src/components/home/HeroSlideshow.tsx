@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import Image, { StaticImageData } from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
 
 import heroAerial from '../../../public/images/chihno/hero-aerial.jpg';
 import facade from '../../../public/images/chihno/facade.jpg';
@@ -82,38 +81,46 @@ export default function HeroSlideshow() {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      {/* Background Architectural Plates with Ken Burns Zoom */}
-      <AnimatePresence mode="popLayout">
-        <motion.div
-          key={slides[currentIndex].id}
-          initial={{ opacity: 0, scale: 1.04 }}
-          animate={{ opacity: 1, scale: 1.12 }}
-          exit={{ opacity: 0, scale: 1.18 }}
-          transition={{
-            opacity: { duration: 1.6, ease: [0.16, 1, 0.3, 1] },
-            scale: { duration: SLIDE_DURATION / 1000 + 1.2, ease: 'linear' },
-          }}
-          className="absolute inset-0 w-full h-full"
-        >
-          <Image
-            src={slides[currentIndex].image}
-            alt={slides[currentIndex].alt}
-            fill
-            priority
-            placeholder={typeof slides[currentIndex].image !== 'string' ? 'blur' : undefined}
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-        </motion.div>
-      </AnimatePresence>
+      {/* Background Architectural Plates with Hardware-Accelerated CSS Ken Burns Zoom */}
+      <div className="absolute inset-0 w-full h-full">
+        {slides.map((slide, idx) => {
+          const isActive = idx === currentIndex;
+          return (
+            <div
+              key={slide.id}
+              className={`absolute inset-0 w-full h-full transition-opacity duration-1200 ease-out ${
+                isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+              }`}
+              aria-hidden={!isActive}
+            >
+              <div
+                className={`w-full h-full ${
+                  isActive ? 'animate-ken-burns' : 'transform scale-100'
+                } ${isPaused ? 'animation-paused' : ''}`}
+              >
+                <Image
+                  src={slide.image}
+                  alt={slide.alt}
+                  fill
+                  priority={idx === 0}
+                  loading={idx === 0 ? 'eager' : 'lazy'}
+                  placeholder={typeof slide.image !== 'string' ? 'blur' : undefined}
+                  sizes="100vw"
+                  className="object-cover object-center"
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
 
       {/* Multi-layered Architectural Scrims for text legibility & rich luxury atmosphere */}
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/88 via-45% to-navy-deep/20 pointer-events-none z-10" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/40 to-transparent pointer-events-none z-10" />
-      <div className="absolute inset-0 bg-radial-vignette opacity-60 pointer-events-none z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/88 via-45% to-navy-deep/20 pointer-events-none z-20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/40 to-transparent pointer-events-none z-20" />
+      <div className="absolute inset-0 bg-radial-vignette opacity-60 pointer-events-none z-20" />
 
       {/* Ambient subtle gold lighting at top-left corner */}
-      <div className="absolute -top-32 -left-32 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none z-10" />
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none z-20" />
 
       {/* Top-Right Architectural Coordinates & Perspective Metadata */}
       <div className="absolute top-28 right-6 md:right-12 z-30 hidden lg:flex flex-col items-end gap-2">
@@ -128,20 +135,14 @@ export default function HeroSlideshow() {
       {/* Architectural Slide Controller Strip (Bottom Right) */}
       <div className="absolute bottom-28 right-6 md:right-12 z-30 hidden md:flex flex-col items-end gap-3 max-w-sm">
         {/* Active Perspective Label */}
-        <motion.div
-          key={`label-${currentIndex}`}
-          initial={{ opacity: 0, x: 10 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-right"
-        >
+        <div className="text-right transition-all duration-300">
           <span className="eyebrow text-[9.5px] text-gold-bright block tracking-widest">
             {slides[currentIndex].code} / 04 · {slides[currentIndex].title}
           </span>
           <span className="text-[11.5px] text-ivory/60 font-light block mt-0.5">
             {slides[currentIndex].category}
           </span>
-        </motion.div>
+        </div>
 
         {/* Minimalist Interactive Slide Tracks */}
         <div className="flex items-center gap-2.5 bg-navy-deep/75 backdrop-blur-md p-2 rounded-sm border border-ivory/10 shadow-2xl">
@@ -164,18 +165,14 @@ export default function HeroSlideshow() {
                   </span>
                 </div>
 
-                {/* Progress bar line for each perspective */}
+                {/* Hardware-accelerated CSS Progress bar line */}
                 <div className="w-10 md:w-12 h-[2px] bg-ivory/15 rounded-full overflow-hidden relative">
                   {isActive ? (
-                    <motion.div
-                      key={`progress-${idx}`}
-                      initial={{ width: '0%' }}
-                      animate={{ width: isPaused ? '100%' : '100%' }}
-                      transition={{
-                        duration: isPaused ? 0 : SLIDE_DURATION / 1000,
-                        ease: 'linear',
-                      }}
-                      className="h-full bg-gradient-to-r from-gold via-gold-bright to-white"
+                    <div
+                      key={`progress-${idx}-${currentIndex}`}
+                      className={`h-full bg-gradient-to-r from-gold via-gold-bright to-white animate-slide-progress ${
+                        isPaused ? 'animation-paused' : ''
+                      }`}
                     />
                   ) : (
                     <div className="h-full w-0 group-hover:w-full bg-ivory/30 transition-all duration-300" />
@@ -207,3 +204,4 @@ export default function HeroSlideshow() {
     </div>
   );
 }
+
