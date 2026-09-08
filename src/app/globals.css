@@ -4,22 +4,22 @@
 
 @layer base {
   :root {
-    --navy: #061224;
-    --navy-deep: #02050B;
-    --navy-surface: #0B192E;
-    --navy-card: #06101F;
-    --ivory: #F9F7F1;
-    --ivory-dim: #EFE9DA;
-    --gold: #D4AF37;
-    --gold-bright: #F5D27B;
-    --gold-deep: #8F6E27;
-    --gold-muted: rgba(212, 175, 55, 0.20);
-    --ink: #070906;
-    --ink-muted: #2E312B;
-    --sage: #3D5A42;
-    --sage-dim: #E4ECE4;
-    --line: rgba(212, 175, 55, 0.32);
-    --line-light: rgba(7, 9, 6, 0.12);
+    --navy: #030A16;
+    --navy-deep: #000308;
+    --navy-surface: #071222;
+    --navy-card: #040B17;
+    --ivory: #FAF8F3;
+    --ivory-dim: #EBE3D3;
+    --gold: #E0B338;
+    --gold-bright: #FFE082;
+    --gold-deep: #A0781A;
+    --gold-muted: rgba(224, 179, 56, 0.28);
+    --ink: #000000;
+    --ink-muted: #1A1D18;
+    --sage: #2E4C33;
+    --sage-dim: #DDE8DD;
+    --line: rgba(224, 179, 56, 0.42);
+    --line-light: rgba(0, 0, 0, 0.18);
 
     /* Motion — international luxury easing */
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -49,11 +49,11 @@
     background: var(--ivory);
     color: var(--ink);
     line-height: 1.6;
-    font-weight: 450;
+    font-weight: 500;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.018em;
     /* iOS safe area support for notch/home bar */
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
@@ -64,7 +64,13 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  h1, h2, h3, h4, h5, h6, .font-serif, .font-display {
+  h1, h2, h3 {
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+  }
+
+  h4, h5, h6, .font-serif, .font-display {
     font-weight: 700;
     letter-spacing: -0.02em;
   }
