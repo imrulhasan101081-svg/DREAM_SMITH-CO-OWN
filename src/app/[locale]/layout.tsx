@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, Bebas_Neue, JetBrains_Mono } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -10,6 +10,13 @@ const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-sans",
+  display: "swap",
+});
+
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-bebas",
   display: "swap",
 });
 
@@ -122,7 +129,7 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${mellos.variable} ${overcame.variable} ${jetbrainsMono.variable} antialiased bg-ivory text-ink font-sans selection:bg-gold selection:text-navy-deep`}
+        className={`${inter.variable} ${mellos.variable} ${overcame.variable} ${bebasNeue.variable} ${jetbrainsMono.variable} antialiased bg-ivory text-ink font-sans selection:bg-gold selection:text-navy-deep`}
         style={{ WebkitTapHighlightColor: 'transparent' }}
       >
         <NextIntlClientProvider messages={messages}>
