@@ -1,8 +1,12 @@
 import { NextResponse } from "next/server";
+import bcrypt from "bcryptjs";
 import dbConnect from "@/lib/db";
 import Project from "@/lib/models/Project";
 import Application from "@/lib/models/Application";
 import AdminUser from "@/lib/models/AdminUser";
+import Investor from "@/lib/models/Investor";
+import Holding from "@/lib/models/Holding";
+import Certificate from "@/lib/models/Certificate";
 import SiteContent from "@/lib/models/SiteContent";
 
 export const dynamic = "force-dynamic";
@@ -30,27 +34,29 @@ export async function GET(req: Request) {
   const results: Record<string, string> = {};
 
   // ─── 1. SUPER ADMIN ────────────────────────────────────────────────────────
-  const existingSuperAdmin = await AdminUser.findOne({
-    email: "imrulhasanshowmick101081@gmail.com",
+  const superAdminEmail = (process.env.SUPER_ADMIN_EMAIL || "admin@dreamsmith.com").toLowerCase();
+  const defaultAdminPassword = process.env.SUPER_ADMIN_PASSWORD || "Admin@DreamSmith2026!";
+  const passwordHash = await bcrypt.hash(defaultAdminPassword, 10);
+
+  let existingSuperAdmin = await AdminUser.findOne({
+    email: superAdminEmail,
   });
 
   if (!existingSuperAdmin) {
-    await AdminUser.create({
-      name: "Imrul Hasan Showmick",
-      email: "imrulhasanshowmick101081@gmail.com",
+    existingSuperAdmin = await AdminUser.create({
+      name: process.env.SUPER_ADMIN_NAME || "Super Admin",
+      email: superAdminEmail,
+      password_hash: passwordHash,
       role: "SUPER_ADMIN",
       permissions: [], // Super Admins have wildcard "*" — permissions array unused
       isActive: true,
     });
-    results.superAdmin = "Created Super Admin: imrulhasanshowmick101081@gmail.com";
+    results.superAdmin = `Created Super Admin: ${superAdminEmail}`;
   } else {
-    results.superAdmin = "Super Admin already exists";
+    results.superAdmin = `Super Admin ${superAdminEmail} already exists`;
   }
 
   // ─── 1.5. TEST INVESTOR ───────────────────────────────────────────────────
-  const Investor = (await import("@/lib/models/Investor")).default;
-  const bcrypt = (await import("bcryptjs")).default;
-  
   let testInvestor = await Investor.findOne({
     login_email: "investor@dreamsmith.com",
   });
@@ -131,13 +137,11 @@ export async function GET(req: Request) {
       },
     });
     results.project = "Created Dream Smith Chihno project";
+  } else {
     results.project = "Dream Smith Chihno already exists";
   }
 
   // ─── 2.5 TEST HOLDING & CERTIFICATE ───────────────────────────────────────
-  const Holding = (await import("@/lib/models/Holding")).default;
-  const Certificate = (await import("@/lib/models/Certificate")).default;
-
   let testHolding = await Holding.findOne({ investor_id: testInvestor._id });
   if (!testHolding) {
     testHolding = await Holding.create({
