@@ -22,7 +22,7 @@ export default async function SecurityPage() {
 
       <section className="pt-24 pb-16 bg-navy text-ivory text-center border-b border-gold/10">
         <div className="max-w-[800px] mx-auto px-8">
-          <span className="font-mono text-[12px] tracking-[0.14em] text-gold-bright uppercase mb-6 block">{t('eyebrow')}</span>
+          <span className="eyebrow text-[12px] tracking-[0.2em] text-gold-bright mb-6 block font-bold">{t('eyebrow')}</span>
           <h1 className="font-serif font-normal text-[clamp(36px,4vw,52px)] leading-[1.06] tracking-[-0.01em] mb-6">
             {t('title')} <br /><em className="italic font-normal text-gold-bright">{t('titleEmphasis')}</em>
           </h1>

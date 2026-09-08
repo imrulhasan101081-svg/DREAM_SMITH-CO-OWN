@@ -24,7 +24,7 @@ export default async function HowItWorks() {
       {/* PAGE HERO */}
       <section className="pt-24 pb-16 bg-gradient-to-b from-navy to-navy-deep text-ivory">
         <div className="max-w-[800px] mx-auto px-8 text-center">
-          <span className="font-mono text-[12px] tracking-[0.14em] text-gold-bright uppercase mb-6 block">{t('eyebrow')}</span>
+          <span className="eyebrow text-[12px] tracking-[0.2em] text-gold-bright mb-6 block font-bold">{t('eyebrow')}</span>
           <h1 className="font-serif font-normal text-[clamp(36px,4vw,52px)] leading-[1.06] tracking-[-0.01em] mb-6">
             {t('title')} <br /><em className="italic font-normal text-gold-bright">{t('titleEmphasis')}</em>
           </h1>

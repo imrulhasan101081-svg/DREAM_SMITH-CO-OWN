@@ -18,7 +18,7 @@ export default async function ContactPage() {
       <main className="pt-32 pb-24 min-h-screen bg-ivory">
         <div className="max-w-[1180px] mx-auto px-8">
           <div className="max-w-[800px] mb-16">
-            <span className="font-mono text-[12px] tracking-[0.14em] uppercase text-gold mb-4 block">{t('eyebrow')}</span>
+            <span className="eyebrow text-[12px] tracking-[0.2em] uppercase text-gold mb-4 block font-bold">{t('eyebrow')}</span>
             <h1 className="font-serif font-normal text-[clamp(32px,4vw,48px)] leading-[1.15] tracking-[-0.01em] mb-6 text-navy">
               {t('title')} <em className="italic text-gold">{t('titleEmphasis')}</em>
             </h1>

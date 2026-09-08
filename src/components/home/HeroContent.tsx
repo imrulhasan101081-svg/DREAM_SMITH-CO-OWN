@@ -73,7 +73,7 @@ export default function HeroContent({
             <div className="flex flex-wrap items-center gap-3.5 mb-8">
               <div className="flex items-center gap-3 bg-navy-surface/80 backdrop-blur-md border border-gold/30 px-3.5 py-1.5 rounded-sm">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold-bright animate-pulse" aria-hidden="true" />
-                <span className="eyebrow text-[10px] text-gold-bright font-mono tracking-widest uppercase">
+                <span className="eyebrow text-[11px] text-gold-bright tracking-[0.2em] uppercase font-bold">
                   {tEyebrow}
                 </span>
               </div>
@@ -149,7 +149,7 @@ export default function HeroContent({
                     </span>
                   )}
                 </dd>
-                <dt className="eyebrow text-[9.5px] text-ivory/60 mt-3 tracking-wider font-mono">
+                <dt className="eyebrow text-[10px] text-ivory/60 mt-3 tracking-[0.2em] font-bold">
                   {stat.k}
                 </dt>
                 <span className="block text-[11px] text-ivory/35 font-light mt-1">

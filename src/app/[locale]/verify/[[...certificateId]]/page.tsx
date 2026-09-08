@@ -81,7 +81,7 @@ export default function VerifyPage({ params }: { params: { certificateId?: strin
         <div className="max-w-[700px] mx-auto px-8">
 
           <div className="text-center mb-10">
-            <span className="font-mono text-[12px] tracking-[0.14em] text-gold uppercase mb-4 block">{t('eyebrow')}</span>
+            <span className="eyebrow text-[12px] tracking-[0.2em] text-gold uppercase mb-4 block font-bold">{t('eyebrow')}</span>
             <h1 className="font-serif text-[36px] text-navy mb-4">{t('title')}</h1>
             <p className="text-[15px] text-ink/70">{t('description')}</p>
           </div>

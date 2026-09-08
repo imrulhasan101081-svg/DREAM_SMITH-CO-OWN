@@ -37,7 +37,7 @@ export default async function CaresPage() {
       <section className="bg-navy py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070')] bg-cover bg-center"></div>
         <div className="max-w-[1180px] mx-auto px-8 relative z-10 text-center">
-           <span className="font-mono text-[12px] tracking-[0.14em] text-gold uppercase mb-4 block">{t('eyebrow')}</span>
+           <span className="eyebrow text-[12px] tracking-[0.2em] text-gold mb-4 block font-bold">{t('eyebrow')}</span>
            <h1 className="font-serif text-[48px] md:text-[64px] text-ivory mb-6">{t('title')}</h1>
            <p className="text-[16px] text-ivory/70 max-w-[600px] mx-auto leading-relaxed">
              {t('description')}

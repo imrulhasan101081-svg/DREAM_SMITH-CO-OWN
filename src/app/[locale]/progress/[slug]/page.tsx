@@ -38,7 +38,7 @@ export default async function ProgressPage({ params }: { params: { slug: string 
 
       <section className="pt-20 pb-12 bg-navy text-ivory">
         <div className="max-w-[800px] mx-auto px-8 text-center">
-          <span className="font-mono text-[12px] tracking-[0.14em] text-gold-bright uppercase mb-4 block">{t('eyebrow')}</span>
+          <span className="eyebrow text-[12px] tracking-[0.2em] text-gold-bright uppercase mb-4 block font-bold">{t('eyebrow')}</span>
           <h1 className="font-serif font-normal text-[clamp(32px,3.5vw,44px)] leading-[1.1] tracking-[-0.01em] mb-4">
             {t('title')} <em className="italic text-gold">{t('titleEmphasis')}</em>
           </h1>

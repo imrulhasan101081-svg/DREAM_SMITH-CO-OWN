@@ -64,21 +64,23 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Bodoni Moda: ultra-high-contrast Didone serif — closest to Mellos */
+  /* Mellos: ultra-high-contrast Didone luxury serif */
   h1, h2, h3 {
-    font-family: var(--font-serif), 'Georgia', serif;
+    font-family: var(--font-serif), 'Bodoni Moda', 'Georgia', serif;
     font-weight: 400;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.005em;
     line-height: 1.05;
     color: var(--ink);
     font-style: normal;
+    text-wrap: balance;
   }
 
   h4, h5, h6 {
-    font-family: var(--font-serif), 'Georgia', serif;
+    font-family: var(--font-serif), 'Bodoni Moda', 'Georgia', serif;
     font-weight: 500;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.015em;
     line-height: 1.2;
+    text-wrap: balance;
   }
 
   /* Minimum tap target size for accessibility on mobile (Apple HIG: 44px) */
@@ -283,11 +285,11 @@
     text-wrap: balance;
   }
 
-  /* Bebas Neue: geometric heavy display — closest to Overcame Demo Bold */
+  /* Overcame Demo Bold: geometric heavy display */
   .eyebrow {
-    font-family: var(--font-display), sans-serif;
+    font-family: var(--font-display), 'Bebas Neue', sans-serif;
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--ink-muted);

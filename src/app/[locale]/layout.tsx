@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Bodoni_Moda, Bebas_Neue, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -12,17 +13,46 @@ const inter = Inter({
   display: "swap",
 });
 
-const bodoniModa = Bodoni_Moda({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
+const mellos = localFont({
+  src: [
+    {
+      path: "../fonts/Mellos.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Mellos.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
   variable: "--font-serif",
   display: "swap",
 });
 
-const bebasNeue = Bebas_Neue({
-  subsets: ["latin"],
-  weight: ["400"],
+const overcame = localFont({
+  src: [
+    {
+      path: "../fonts/OvercameDemoRegular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/OvercameDemoBold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../fonts/OvercameDemoItalic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../fonts/OvercameDemoBoldItalic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+  ],
   variable: "--font-display",
   display: "swap",
 });
@@ -92,7 +122,7 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${bodoniModa.variable} ${bebasNeue.variable} ${jetbrainsMono.variable} antialiased bg-ivory text-ink font-sans selection:bg-gold selection:text-navy-deep`}
+        className={`${inter.variable} ${mellos.variable} ${overcame.variable} ${jetbrainsMono.variable} antialiased bg-ivory text-ink font-sans selection:bg-gold selection:text-navy-deep`}
         style={{ WebkitTapHighlightColor: 'transparent' }}
       >
         <NextIntlClientProvider messages={messages}>

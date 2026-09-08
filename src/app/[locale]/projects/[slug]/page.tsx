@@ -90,7 +90,7 @@ export default async function ProjectDetail({ params }: { params: { slug: string
         <div className="max-w-[1180px] mx-auto px-8">
           <div className="flex items-end justify-between mb-12">
             <div>
-              <span className="font-mono text-[12px] tracking-[0.14em] uppercase text-gold mb-4 block">{t('gallery.eyebrow')}</span>
+              <span className="eyebrow text-[12px] tracking-[0.2em] uppercase text-gold mb-4 block font-bold">{t('gallery.eyebrow')}</span>
               <h2 className="font-serif font-normal text-[clamp(28px,3.2vw,40px)] leading-[1.15] tracking-[-0.01em] text-navy">{t('gallery.title')} <em className="italic text-gold">{t('gallery.titleEmphasis')}</em></h2>
             </div>
           </div>
@@ -124,7 +124,7 @@ export default async function ProjectDetail({ params }: { params: { slug: string
       {/* PROJECT PROGRESS */}
       <section className="py-24">
         <div className="max-w-[800px] mx-auto px-8 text-center">
-          <span className="font-mono text-[12px] tracking-[0.14em] uppercase text-gold mb-4 block">{t('progress.eyebrow')}</span>
+          <span className="eyebrow text-[12px] tracking-[0.2em] uppercase text-gold mb-4 block font-bold">{t('progress.eyebrow')}</span>
           <h2 className="font-serif font-normal text-[clamp(28px,3.2vw,40px)] leading-[1.15] tracking-[-0.01em] mb-4">{t('progress.title')} <em className="italic text-gold">{t('progress.titleEmphasis')}</em></h2>
           <p className="text-ink/60 text-[16px] leading-relaxed mb-12">{t('progress.description')}</p>
 
