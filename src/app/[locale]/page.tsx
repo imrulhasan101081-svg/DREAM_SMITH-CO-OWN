@@ -5,6 +5,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Hero from '@/components/home/Hero';
 import TrackRecord from '@/components/home/TrackRecord';
+import InvestmentCalculator from '@/components/home/InvestmentCalculator';
+import DeedSpecimen from '@/components/home/DeedSpecimen';
 import Reveal from '@/components/motion/Reveal';
 import Parallax from '@/components/motion/Parallax';
 import dbConnect from '@/lib/db';
@@ -214,6 +216,11 @@ export default async function Home() {
               </div>
             </div>
           </Reveal>
+
+          {/* Interactive Return Simulator */}
+          <Reveal delay={120} className="mt-14 md:mt-18">
+            <InvestmentCalculator />
+          </Reveal>
         </div>
       </section>
 
@@ -235,6 +242,16 @@ export default async function Home() {
               <p className="text-ink/60 text-[16px] leading-[1.7] max-w-[520px] md:pb-2">
                 {t('project.description')}
               </p>
+            </div>
+          </Reveal>
+
+          {/* Architectural Technical Metadata Ribbon */}
+          <Reveal delay={60}>
+            <div className="mb-8 grid grid-cols-2 sm:grid-cols-4 gap-3 border-y border-line-light py-3.5 text-[11px] font-mono text-ink/65">
+              <div><span className="text-gold font-bold">COORDINATES:</span> 24.37° N, 88.60° E</div>
+              <div><span className="text-gold font-bold">APPROVAL:</span> RDA REG. PLAN OK</div>
+              <div><span className="text-gold font-bold">TITLE:</span> 100% FREEHOLD DEED</div>
+              <div><span className="text-gold font-bold">STATUS:</span> PILING VERIFIED</div>
             </div>
           </Reveal>
 
@@ -363,6 +380,11 @@ export default async function Home() {
               </Reveal>
             ))}
           </div>
+
+          {/* Tactile Deed Specimen & Legal Audit */}
+          <Reveal delay={140} className="mt-14 md:mt-18">
+            <DeedSpecimen />
+          </Reveal>
         </div>
       </section>
 

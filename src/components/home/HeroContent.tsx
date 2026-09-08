@@ -71,15 +71,15 @@ export default function HeroContent({
           {/* Eyebrow & Institutional Trust Tag */}
           <Reveal y={14}>
             <div className="flex flex-wrap items-center gap-3.5 mb-8">
-              <div className="flex items-center gap-3 bg-navy-surface/80 backdrop-blur-md border border-gold/30 px-3.5 py-1.5 rounded-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-gold-bright animate-pulse" aria-hidden="true" />
-                <span className="eyebrow text-[11px] text-gold-bright tracking-[0.2em] uppercase font-bold">
-                  {tEyebrow}
+              <div className="flex items-center gap-2.5 bg-navy-surface/90 backdrop-blur-md border border-gold/40 px-3.5 py-1.5 rounded-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold-bright" aria-hidden="true" />
+                <span className="eyebrow text-[11px] text-gold-bright tracking-[0.24em] font-bold">
+                  OFFERING OPEN // TRANCHE 01 — RAJSHAHI
                 </span>
               </div>
               <span className="hidden sm:inline-block w-8 h-px bg-gold/40" aria-hidden="true" />
               <span className="hidden sm:inline-block font-mono text-[10px] text-ivory/50 tracking-widest uppercase">
-                FRACTIONAL CO-OWNERSHIP PROGRAMME
+                FREEHOLD LAND TITLE ESCROW
               </span>
             </div>
           </Reveal>
@@ -103,19 +103,20 @@ export default function HeroContent({
 
           {/* Primary Action Buttons */}
           <Reveal delay={340} y={20}>
-            <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 max-w-[440px] sm:max-w-none">
+            <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6 max-w-[500px] sm:max-w-none">
               <Link
                 href="/apply"
-                className="btn-gold px-9 py-4 text-[14px] font-semibold tracking-wider uppercase group text-center justify-center"
+                className="btn-gold px-9 py-4 text-[13.5px] font-semibold tracking-wider uppercase group text-center justify-center shadow-lg"
               >
                 <span>{tReserveShare}</span>
                 <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </Link>
               <Link
-                href="/how-it-works"
-                className="btn-outline px-8 py-4 text-[14px] tracking-wide text-center justify-center"
+                href="/verify"
+                className="inline-flex items-center justify-center gap-2 text-ivory/70 hover:text-gold-bright text-[13px] font-mono tracking-wider transition-colors duration-300 py-3"
               >
-                {tSeeHowItWorks}
+                <span>VERIFY DEED REGISTRY</span>
+                <span aria-hidden="true">↗</span>
               </Link>
             </div>
           </Reveal>
