@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Cormorant, Barlow_Condensed, JetBrains_Mono } from "next/font/google";
+import { Inter, Bodoni_Moda, Bebas_Neue, JetBrains_Mono } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -12,17 +12,17 @@ const inter = Inter({
   display: "swap",
 });
 
-const cormorant = Cormorant({
+const bodoniModa = Bodoni_Moda({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
   variable: "--font-serif",
   display: "swap",
 });
 
-const barlowCondensed = Barlow_Condensed({
+const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400"],
   variable: "--font-display",
   display: "swap",
 });
@@ -92,7 +92,7 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${cormorant.variable} ${barlowCondensed.variable} ${jetbrainsMono.variable} antialiased bg-ivory text-ink font-sans selection:bg-gold selection:text-navy-deep`}
+        className={`${inter.variable} ${bodoniModa.variable} ${bebasNeue.variable} ${jetbrainsMono.variable} antialiased bg-ivory text-ink font-sans selection:bg-gold selection:text-navy-deep`}
         style={{ WebkitTapHighlightColor: 'transparent' }}
       >
         <NextIntlClientProvider messages={messages}>
