@@ -90,6 +90,9 @@ export const metadata: Metadata = {
     icon: "/images/logo/official-logo-icon.png",
     apple: "/images/logo/official-logo-icon.png",
   },
+  verification: {
+    google: "google06493120933d599f",
+  },
   openGraph: {
     title: "Dream Smith Co-Own",
     description: "Fractional Real Estate Co-Ownership Platform",
