@@ -16,12 +16,12 @@ const inter = Inter({
 const mellos = localFont({
   src: [
     {
-      path: "../fonts/Mellos.otf",
+      path: "../fonts/Mellos.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../fonts/Mellos.ttf",
+      path: "../fonts/Mellos.woff2",
       weight: "700",
       style: "normal",
     },
@@ -33,22 +33,22 @@ const mellos = localFont({
 const overcame = localFont({
   src: [
     {
-      path: "../fonts/OvercameDemoRegular.ttf",
+      path: "../fonts/OvercameDemoRegular.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../fonts/OvercameDemoBold.ttf",
+      path: "../fonts/OvercameDemoBold.woff2",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../fonts/OvercameDemoItalic.ttf",
+      path: "../fonts/OvercameDemoItalic.woff2",
       weight: "400",
       style: "italic",
     },
     {
-      path: "../fonts/OvercameDemoBoldItalic.ttf",
+      path: "../fonts/OvercameDemoBoldItalic.woff2",
       weight: "700",
       style: "italic",
     },

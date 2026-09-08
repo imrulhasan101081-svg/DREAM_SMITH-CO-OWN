@@ -73,6 +73,12 @@
     color: var(--ink);
     font-style: normal;
     text-wrap: balance;
+    font-feature-settings: "liga" 1, "kern" 1;
+  }
+
+  h1 em, h2 em, h3 em, .serif em {
+    font-style: italic;
+    font-weight: 400;
   }
 
   h4, h5, h6 {
@@ -81,6 +87,7 @@
     letter-spacing: 0.015em;
     line-height: 1.2;
     text-wrap: balance;
+    font-feature-settings: "liga" 1, "kern" 1;
   }
 
   /* Minimum tap target size for accessibility on mobile (Apple HIG: 44px) */
@@ -301,11 +308,14 @@
     background: linear-gradient(135deg, #FFE082 0%, #E0B338 45%, #A0781A 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
   }
 
-  /* Tabular figures for financial precision */
+  /* Tabular figures for institutional financial precision */
   .figures {
-    font-variant-numeric: tabular-nums;
-    font-feature-settings: 'tnum' 1;
+    font-variant-numeric: tabular-nums lining-nums;
+    font-feature-settings: 'tnum' 1, 'lnum' 1;
+    font-kerning: normal;
   }
 }
