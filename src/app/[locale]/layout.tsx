@@ -1,20 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans, Cormorant_Garamond, JetBrains_Mono } from "next/font/google";
+import { DM_Sans, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-sans",
   display: "swap",
 });
 
-const cormorantGaramond = Cormorant_Garamond({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
   variable: "--font-serif",
   display: "swap",
 });
@@ -84,12 +84,13 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${plusJakartaSans.variable} ${cormorantGaramond.variable} ${jetbrainsMono.variable} antialiased bg-ivory text-ink font-sans selection:bg-gold selection:text-navy-deep`}
+        className={`${dmSans.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} antialiased bg-ivory text-ink font-sans selection:bg-gold selection:text-navy-deep`}
         style={{ WebkitTapHighlightColor: 'transparent' }}
       >
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <SpeedInsights />
       </body>
     </html>
   );

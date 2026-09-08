@@ -81,11 +81,11 @@ export async function GET(req: Request) {
     chihno = await Project.create({
       name: "Chihno",
       slug: "chihno",
-      location: "Octroy morh, Motihar, Rajshahi",
-      address: "Octroy morh, Motihar, Rajshahi",
+      location: "Oktroy More, Kazla, Rajshahi",
+      address: "Oktroy More, Kazla, Rajshahi",
       structure_details: "(G+9) 10- Storied Residential Building.",
       description:
-        "Chinnoh is a premium (G+9) 10-Storied residential complex located at Octroy morh, Motihar, Rajshahi. The project offers fractional co-ownership shares at ৳4,00,000 per share (100 sq ft), with a guaranteed buy-back at ৳5,50,000 after 36 months.",
+        "Chinnoh is a premium (G+9) 10-Storied residential complex located at Oktroy More, Kazla, Rajshahi. The project offers fractional co-ownership shares at ৳4,00,000 per share (100 sq ft), with a guaranteed buy-back at ৳5,50,000 after 36 months.",
       total_shares: 274,
       shares_reserved: 0,
       price_per_share: 400000,

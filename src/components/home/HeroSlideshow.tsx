@@ -25,7 +25,7 @@ const slides: Slide[] = [
     code: '01',
     title: 'AERIAL VIEW',
     category: 'RUET & Kazla Frontage',
-    alt: 'Aerial view of Dream Smith Chihno, Oxoy More, Kazla, Rajshahi',
+    alt: 'Aerial view of Dream Smith Chihno, Oktroy More, Kazla, Rajshahi',
   },
   {
     id: 'facade',

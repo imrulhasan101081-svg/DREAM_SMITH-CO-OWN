@@ -6,7 +6,7 @@ import Header from '@/components/Header';
 
 export const metadata = {
   title: 'Dream Smith Chihno | Dream Smith Co-Own',
-  description: 'A 10-storey residential & studio development at Oxoy More, Kazla. Reserve a 100 sq ft fractional share for ৳4,00,000 with a guaranteed ৳5,50,000 buy-back.',
+  description: 'A 10-storey residential & studio development at Oktroy More, Kazla. Reserve a 100 sq ft fractional share for ৳4,00,000 with a guaranteed ৳5,50,000 buy-back.',
 };
 
 export default async function ProjectDetail({ params }: { params: { slug: string } }) {

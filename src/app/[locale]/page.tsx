@@ -279,7 +279,7 @@ export default async function Home() {
                 <div className="border border-line-light h-full">
                   <dl className="divide-y divide-line-light">
                     {[
-                      { k: t('project.facts.location'), v: project?.location || 'Oxoy More, Kazla, Rajshahi' },
+                      { k: t('project.facts.location'), v: project?.location || 'Oktroy More, Kazla, Rajshahi' },
                       { k: t('project.facts.structure'), v: project?.structure_details || '10 floors' },
                       {
                         k: t('project.facts.constructionPeriod'),
