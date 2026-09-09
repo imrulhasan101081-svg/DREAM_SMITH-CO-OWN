@@ -23,12 +23,12 @@ const bebasNeue = Bebas_Neue({
 const mellos = localFont({
   src: [
     {
-      path: "../fonts/Mellos.woff2",
+      path: "../../fonts/Mellos.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../fonts/Mellos.woff2",
+      path: "../../fonts/Mellos.woff2",
       weight: "700",
       style: "normal",
     },
@@ -40,22 +40,22 @@ const mellos = localFont({
 const overcame = localFont({
   src: [
     {
-      path: "../fonts/OvercameDemoRegular.woff2",
+      path: "../../fonts/OvercameDemoRegular.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../fonts/OvercameDemoBold.woff2",
+      path: "../../fonts/OvercameDemoBold.woff2",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../fonts/OvercameDemoItalic.woff2",
+      path: "../../fonts/OvercameDemoItalic.woff2",
       weight: "400",
       style: "italic",
     },
     {
-      path: "../fonts/OvercameDemoBoldItalic.woff2",
+      path: "../../fonts/OvercameDemoBoldItalic.woff2",
       weight: "700",
       style: "italic",
     },

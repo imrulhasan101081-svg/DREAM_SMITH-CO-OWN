@@ -111,7 +111,7 @@ export default function InvestmentCalculator() {
             onChange={(e) => setShares(Number(e.target.value))}
             className="w-full h-2 bg-navy-deep border border-gold/20 rounded-lg appearance-none cursor-pointer accent-gold focus:outline-none"
           />
-          <div className="flex justify-between text-[10px] font-mono text-ivory/35 mt-2">
+          <div className="flex justify-between text-[10px] font-mono text-ivory/65 mt-2">
             <span>1 Share (Minimum)</span>
             <span className="hidden sm:inline">5 Shares</span>
             <span className="hidden sm:inline">10 Shares</span>
@@ -126,10 +126,10 @@ export default function InvestmentCalculator() {
               key={num}
               type="button"
               onClick={() => setShares(num)}
-              className={`px-3 py-1 text-[11px] font-mono tracking-wider border transition-all ${
+              className={`px-3 py-1.5 text-[12px] font-mono rounded-sm transition-all border ${
                 shares === num
                   ? 'border-gold bg-gold/15 text-gold-bright font-semibold'
-                  : 'border-ivory/10 bg-navy-deep/40 text-ivory/60 hover:border-gold/40'
+                  : 'border-ivory/10 bg-navy-deep/40 text-ivory/80 hover:border-gold/40'
               }`}
             >
               {num} {num === 1 ? 'Share' : 'Shares'}
@@ -142,11 +142,11 @@ export default function InvestmentCalculator() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 py-8">
         {/* Metric 1: Capital Commitment */}
         <div className="bg-navy-deep/70 border border-ivory/10 p-5 rounded-sm corner-ticks">
-          <div className="eyebrow text-[9.5px] text-ivory/45 mb-2 font-bold">TOTAL CAPITAL COMMITMENT</div>
+          <div className="eyebrow text-[9.5px] text-ivory/75 mb-2 font-bold">TOTAL CAPITAL COMMITMENT</div>
           <div className="font-serif text-[clamp(24px,2.4vw,32px)] text-ivory figures font-normal leading-tight">
             {formatMoney(totalInvestmentBDT)}
           </div>
-          <div className="text-[11.5px] text-ivory/40 mt-1.5">
+          <div className="text-[11.5px] text-ivory/70 mt-1.5">
             Registered Sub-Deed of Land
           </div>
         </div>
@@ -157,29 +157,29 @@ export default function InvestmentCalculator() {
           <div className="font-serif text-[clamp(24px,2.4vw,32px)] text-gold-bright figures font-normal leading-tight">
             {formatMoney(totalReturnBDT)}
           </div>
-          <div className="text-[11.5px] text-gold/60 mt-1.5">
+          <div className="text-[11.5px] text-gold-bright/90 mt-1.5">
             Contractual Buyback Clause
           </div>
         </div>
 
         {/* Metric 3: Net Capital Gain */}
         <div className="bg-navy-deep/70 border border-ivory/10 p-5 rounded-sm corner-ticks">
-          <div className="eyebrow text-[9.5px] text-ivory/45 mb-2 font-bold">TOTAL ESTIMATED GAIN</div>
+          <div className="eyebrow text-[9.5px] text-ivory/75 mb-2 font-bold">TOTAL ESTIMATED GAIN</div>
           <div className="font-serif text-[clamp(24px,2.4vw,32px)] text-emerald-400 figures font-normal leading-tight">
             +{formatMoney(totalGainBDT)}
           </div>
-          <div className="text-[11.5px] text-emerald-400/60 mt-1.5">
+          <div className="text-[11.5px] text-emerald-400/90 mt-1.5">
             +37.5% Total Net Yield
           </div>
         </div>
 
         {/* Metric 4: Land Equity Area */}
         <div className="bg-navy-deep/70 border border-ivory/10 p-5 rounded-sm corner-ticks">
-          <div className="eyebrow text-[9.5px] text-ivory/45 mb-2 font-bold">FREEHOLD LAND OWNERSHIP</div>
+          <div className="eyebrow text-[9.5px] text-ivory/75 mb-2 font-bold">FREEHOLD LAND OWNERSHIP</div>
           <div className="font-serif text-[clamp(24px,2.4vw,32px)] text-ivory figures font-normal leading-tight">
-            {totalSqft} <span className="text-[16px] font-sans font-normal text-ivory/50">sq.ft.</span>
+            {totalSqft} <span className="text-[16px] font-sans font-normal text-ivory/70">sq.ft.</span>
           </div>
-          <div className="text-[11.5px] text-ivory/40 mt-1.5">
+          <div className="text-[11.5px] text-ivory/70 mt-1.5">
             {(shares * 0.125).toFixed(3)} Decimal Share
           </div>
         </div>

@@ -97,7 +97,7 @@ export default function DeedSpecimen() {
                   <div className="eyebrow text-gold-bright text-[10px] tracking-[0.2em] font-bold">
                     DREAM SMITH CO-OWN // AZO GROUP
                   </div>
-                  <div className="text-[10px] font-mono text-ivory/40">
+                  <div className="text-[10px] font-mono text-ivory/75">
                     REGISTRY REF: DS-2026-CH88-77F
                   </div>
                 </div>
@@ -110,37 +110,37 @@ export default function DeedSpecimen() {
             {/* Certificate Body */}
             <div className="py-6 space-y-4 relative z-10">
               <div className="text-center py-2">
-                <div className="font-serif italic text-[14px] text-gold/80 mb-1">Official Specimen</div>
-                <div className="font-serif text-[clamp(20px,2.2vw,28px)] text-ivory tracking-wide uppercase">
+                <div className="font-serif italic text-[14px] text-gold-bright mb-1">Official Specimen</div>
+                <div className="font-serif text-[clamp(20px,2.2vw,28px)] text-ivory tracking-wide uppercase leading-tight">
                   Certificate of Land Co-Ownership
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4 bg-navy-surface/80 p-4 border border-ivory/10 rounded-sm text-[12px]">
                 <div>
-                  <span className="eyebrow text-[8.5px] text-ivory/40 block mb-1">ASSET ASCRIPTION</span>
+                  <span className="eyebrow text-[8.5px] text-ivory/75 block mb-1">ASSET ASCRIPTION</span>
                   <span className="font-semibold text-ivory">Dream Smith Chihno</span>
-                  <span className="block text-[10px] text-ivory/50 font-mono">10-Storey Tower, Rajshahi</span>
+                  <span className="block text-[10px] text-ivory/80 font-mono">10-Storey Tower, Rajshahi</span>
                 </div>
                 <div>
-                  <span className="eyebrow text-[8.5px] text-ivory/40 block mb-1">ALLOCATION EQUITY</span>
+                  <span className="eyebrow text-[8.5px] text-ivory/75 block mb-1">ALLOCATION EQUITY</span>
                   <span className="font-serif text-gold-bright text-[15px] figures">1 Share / ৳4,00,000</span>
-                  <span className="block text-[10px] text-ivory/50">0.125 Decimal Land Right</span>
+                  <span className="block text-[10px] text-ivory/80">0.125 Decimal Land Right</span>
                 </div>
                 <div>
-                  <span className="eyebrow text-[8.5px] text-ivory/40 block mb-1">DEED REGISTRATION</span>
+                  <span className="eyebrow text-[8.5px] text-ivory/75 block mb-1">DEED REGISTRATION</span>
                   <span className="text-ivory font-mono text-[11px]">Sub-Registry Office, Rajshahi</span>
                 </div>
                 <div>
-                  <span className="eyebrow text-[8.5px] text-ivory/40 block mb-1">BUYBACK COVENANT</span>
+                  <span className="eyebrow text-[8.5px] text-ivory/75 block mb-1">BUYBACK COVENANT</span>
                   <span className="text-emerald-400 font-serif text-[13px]">৳5,50,000 (36 Months)</span>
                 </div>
               </div>
 
               {/* Cryptographic Hash Band */}
-              <div className="bg-navy/90 p-3 border border-gold/20 rounded-sm flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[10.5px] font-mono text-ivory/60">
+              <div className="bg-navy/90 p-3 border border-gold/20 rounded-sm flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[10.5px] font-mono text-ivory/80">
                 <div className="truncate">
-                  <span className="text-gold">SHA-256 HASH:</span> e4b8...88ca91fc20
+                  <span className="text-gold-bright">SHA-256 HASH:</span> e4b8...88ca91fc20
                 </div>
                 <Link
                   href="/verify/DS-2026-CH88"
@@ -152,7 +152,7 @@ export default function DeedSpecimen() {
             </div>
 
             {/* Official Stamp & Signatures */}
-            <div className="pt-4 border-t border-ivory/10 flex flex-wrap justify-between items-center gap-3 text-[10px] font-mono text-ivory/50 relative z-10">
+            <div className="pt-4 border-t border-ivory/10 flex flex-wrap justify-between items-center gap-3 text-[10px] font-mono text-ivory/75 relative z-10">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-gold animate-pulse" />
                 <span>LEGAL ESCROW AGENT: DUAL-KEY BANK TRUST</span>

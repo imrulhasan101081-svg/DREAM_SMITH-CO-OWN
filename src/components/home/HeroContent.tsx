@@ -142,18 +142,18 @@ export default function HeroContent({
                   i > 0 ? 'lg:border-l border-ivory/15' : ''
                 }`}
               >
-                <dd className="font-serif text-[clamp(28px,3.2vw,40px)] leading-none text-gold-gradient figures font-normal">
+                <dd className="font-serif text-[clamp(28px,3.2vw,40px)] leading-tight text-gold-gradient figures font-normal py-0.5">
                   {stat.v}
                   {stat.suffix && (
-                    <span className="font-mono text-[12px] ml-1.5 text-gold/80 align-top font-medium tracking-wider">
+                    <span className="font-mono text-[12px] ml-1.5 text-gold-bright align-top font-medium tracking-wider">
                       {stat.suffix}
                     </span>
                   )}
                 </dd>
-                <dt className="eyebrow text-[10px] text-ivory/60 mt-3 tracking-[0.2em] font-bold">
+                <dt className="eyebrow text-[10.5px] text-ivory/85 mt-2.5 tracking-[0.2em] font-bold">
                   {stat.k}
                 </dt>
-                <span className="block text-[11px] text-ivory/35 font-light mt-1">
+                <span className="block text-[11.5px] text-ivory/65 font-normal mt-1">
                   {stat.sub}
                 </span>
               </Reveal>
