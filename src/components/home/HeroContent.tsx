@@ -71,15 +71,28 @@ export default function HeroContent({
           {/* Institutional Scrolling Ticker Strip */}
           <Reveal y={14}>
             <div className="flex items-center gap-0 mb-8 overflow-hidden">
-              {/* Status Badge — always visible, anchored left */}
-              <div className="flex-shrink-0 flex items-center gap-2.5 bg-navy-surface/90 backdrop-blur-md border border-gold/40 px-3.5 py-1.5 rounded-sm z-10 mr-4">
-                <span className="relative flex h-2 w-2" aria-hidden="true">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-bright opacity-60" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-gold-bright" />
-                </span>
-                <span className="eyebrow text-[11px] text-gold-bright tracking-[0.24em] font-bold whitespace-nowrap">
-                  OFFERING OPEN // TRANCHE 01 — RAJSHAHI
-                </span>
+
+              {/* Anchored Left — Live Status + Verified Mark */}
+              <div className="flex-shrink-0 flex items-center gap-0 z-10 mr-5">
+                {/* Live investment status */}
+                <div className="flex items-center gap-2 bg-navy-surface/90 backdrop-blur-md border border-gold/40 border-r-0 px-3 py-1.5">
+                  <span className="relative flex h-2 w-2" aria-hidden="true">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-bright opacity-60" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-gold-bright" />
+                  </span>
+                  <span className="font-mono text-[10px] text-gold-bright tracking-[0.2em] font-bold whitespace-nowrap uppercase">
+                    LIVE INVESTMENT
+                  </span>
+                </div>
+                {/* Divider + verified certified mark */}
+                <div className="flex items-center gap-2 bg-navy-surface/70 backdrop-blur-md border border-gold/25 px-3 py-1.5">
+                  <svg className="w-3 h-3 text-gold shrink-0" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path d="M8 0L9.8 5.5H15.6L10.9 8.9L12.7 14.4L8 11L3.3 14.4L5.1 8.9L0.4 5.5H6.2L8 0Z"/>
+                  </svg>
+                  <span className="font-mono text-[10px] text-ivory/80 tracking-[0.18em] font-medium whitespace-nowrap uppercase">
+                    AZO GROUP VERIFIED
+                  </span>
+                </div>
               </div>
 
               {/* Scrolling ticker */}
@@ -88,28 +101,28 @@ export default function HeroContent({
                 <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-navy-deep/80 to-transparent z-10 pointer-events-none" />
                 <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-navy-deep/80 to-transparent z-10 pointer-events-none" />
 
-                <div className="flex animate-hero-ticker whitespace-nowrap" style={{ animationDuration: '28s' }}>
-                  {/* Duplicate items for seamless loop */}
+                <div className="flex animate-hero-ticker whitespace-nowrap" style={{ animationDuration: '30s' }}>
                   {[0, 1].map((pass) => (
                     <div key={pass} className="flex items-center gap-0 flex-shrink-0">
                       {[
-                        { icon: '⬡', label: 'FREEHOLD LAND TITLE ESCROW' },
-                        { icon: '◈', label: 'DUAL-KEY BANK TRUST' },
-                        { icon: '▣', label: '274 CO-OWN SHARES TOTAL' },
-                        { icon: '◉', label: 'NOTARIZED STAMP AGREEMENT' },
-                        { icon: '⬡', label: 'SUB-REGISTRY RAJSHAHI' },
-                        { icon: '◈', label: '37.5% GUARANTEED YIELD' },
-                        { icon: '▣', label: '36-MONTH BUYBACK COVENANT' },
-                        { icon: '⬡', label: 'AZO GROUP CERTIFIED' },
-                        { icon: '◈', label: '100 SQ.FT. PER SHARE' },
-                        { icon: '▣', label: 'SHA-256 DEED HASH LEDGER' },
-                        { icon: '◉', label: 'G+9 RESIDENTIAL COMPLEX' },
+                        { icon: '◈', label: 'FREEHOLD LAND TITLE ESCROW' },
+                        { icon: '▣', label: 'DUAL-KEY BANK TRUST' },
+                        { icon: '◉', label: '274 CO-OWN SHARES TOTAL' },
+                        { icon: '◈', label: 'NOTARIZED STAMP DEED' },
+                        { icon: '▣', label: 'SUB-REGISTRY RAJSHAHI' },
+                        { icon: '◉', label: '37.5% GUARANTEED YIELD' },
+                        { icon: '◈', label: '36-MONTH BUYBACK COVENANT' },
+                        { icon: '▣', label: '100 SQ.FT. PER SHARE' },
+                        { icon: '◉', label: 'SHA-256 CHAIN VERIFIED' },
+                        { icon: '◈', label: 'G+9 RESIDENTIAL COMPLEX' },
+                        { icon: '▣', label: 'RAJSHAHI CITY CORP. ZONE' },
+                        { icon: '◉', label: 'OKTROY MORE, KAZLA' },
                       ].map((item) => (
                         <span
                           key={`${pass}-${item.label}`}
-                          className="inline-flex items-center gap-2.5 px-5 font-mono text-[10px] tracking-[0.18em] text-ivory/55 uppercase border-r border-gold/15 last:border-r-0 leading-none py-1.5"
+                          className="inline-flex items-center gap-2 px-5 font-mono text-[10px] tracking-[0.16em] text-ivory/60 uppercase border-r border-gold/15 last:border-r-0 leading-none py-1.5"
                         >
-                          <span className="text-gold/60 text-[8px]">{item.icon}</span>
+                          <span className="text-gold text-[7px]">{item.icon}</span>
                           {item.label}
                         </span>
                       ))}
