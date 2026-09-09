@@ -362,3 +362,19 @@
 .animation-paused {
   animation-play-state: paused !important;
 }
+
+/* ── Institutional Info Ticker ───────────────────────────────────────────── */
+@keyframes heroTicker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-hero-ticker {
+  animation: heroTicker linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+}

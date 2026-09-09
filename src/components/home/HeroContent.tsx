@@ -68,19 +68,56 @@ export default function HeroContent({
       <div className="relative z-20 max-w-[1360px] mx-auto px-6 md:px-12 pt-32 pb-16 md:pt-40 md:pb-20 w-full flex flex-col justify-end flex-1">
         <motion.div style={{ y: contentY, opacity: contentOpacity }} className="max-w-[860px]">
           
-          {/* Eyebrow & Institutional Trust Tag */}
+          {/* Institutional Scrolling Ticker Strip */}
           <Reveal y={14}>
-            <div className="flex flex-wrap items-center gap-3.5 mb-8">
-              <div className="flex items-center gap-2.5 bg-navy-surface/90 backdrop-blur-md border border-gold/40 px-3.5 py-1.5 rounded-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-gold-bright" aria-hidden="true" />
-                <span className="eyebrow text-[11px] text-gold-bright tracking-[0.24em] font-bold">
+            <div className="flex items-center gap-0 mb-8 overflow-hidden">
+              {/* Status Badge — always visible, anchored left */}
+              <div className="flex-shrink-0 flex items-center gap-2.5 bg-navy-surface/90 backdrop-blur-md border border-gold/40 px-3.5 py-1.5 rounded-sm z-10 mr-4">
+                <span className="relative flex h-2 w-2" aria-hidden="true">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-bright opacity-60" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-gold-bright" />
+                </span>
+                <span className="eyebrow text-[11px] text-gold-bright tracking-[0.24em] font-bold whitespace-nowrap">
                   OFFERING OPEN // TRANCHE 01 — RAJSHAHI
                 </span>
               </div>
-              <span className="hidden sm:inline-block w-8 h-px bg-gold/40" aria-hidden="true" />
-              <span className="hidden sm:inline-block font-mono text-[10px] text-ivory/50 tracking-widest uppercase">
-                FREEHOLD LAND TITLE ESCROW
-              </span>
+
+              {/* Scrolling ticker */}
+              <div className="flex-1 overflow-hidden relative" aria-hidden="true">
+                {/* Fade edges */}
+                <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-navy-deep/80 to-transparent z-10 pointer-events-none" />
+                <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-navy-deep/80 to-transparent z-10 pointer-events-none" />
+
+                <div className="flex animate-hero-ticker whitespace-nowrap" style={{ animationDuration: '28s' }}>
+                  {/* Duplicate items for seamless loop */}
+                  {[0, 1].map((pass) => (
+                    <div key={pass} className="flex items-center gap-0 flex-shrink-0">
+                      {[
+                        { icon: '⬡', label: 'FREEHOLD LAND TITLE ESCROW' },
+                        { icon: '◈', label: 'DUAL-KEY BANK TRUST' },
+                        { icon: '▣', label: '274 CO-OWN SHARES TOTAL' },
+                        { icon: '◉', label: 'NOTARIZED STAMP AGREEMENT' },
+                        { icon: '⬡', label: 'SUB-REGISTRY RAJSHAHI' },
+                        { icon: '◈', label: '37.5% GUARANTEED YIELD' },
+                        { icon: '▣', label: '36-MONTH BUYBACK COVENANT' },
+                        { icon: '◉', label: 'RAJUK APPROVED STRUCTURE' },
+                        { icon: '⬡', label: 'AZO GROUP CERTIFIED' },
+                        { icon: '◈', label: '100 SQ.FT. PER SHARE' },
+                        { icon: '▣', label: 'SHA-256 DEED HASH LEDGER' },
+                        { icon: '◉', label: 'G+9 RESIDENTIAL COMPLEX' },
+                      ].map((item) => (
+                        <span
+                          key={`${pass}-${item.label}`}
+                          className="inline-flex items-center gap-2.5 px-5 font-mono text-[10px] tracking-[0.18em] text-ivory/55 uppercase border-r border-gold/15 last:border-r-0 leading-none py-1.5"
+                        >
+                          <span className="text-gold/60 text-[8px]">{item.icon}</span>
+                          {item.label}
+                        </span>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </Reveal>
 
