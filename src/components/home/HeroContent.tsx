@@ -100,7 +100,6 @@ export default function HeroContent({
                         { icon: '⬡', label: 'SUB-REGISTRY RAJSHAHI' },
                         { icon: '◈', label: '37.5% GUARANTEED YIELD' },
                         { icon: '▣', label: '36-MONTH BUYBACK COVENANT' },
-                        { icon: '◉', label: 'RAJUK APPROVED STRUCTURE' },
                         { icon: '⬡', label: 'AZO GROUP CERTIFIED' },
                         { icon: '◈', label: '100 SQ.FT. PER SHARE' },
                         { icon: '▣', label: 'SHA-256 DEED HASH LEDGER' },
