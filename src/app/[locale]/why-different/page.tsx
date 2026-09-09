@@ -59,7 +59,7 @@ export default async function WhyDifferentPage() {
 
           <div className="mt-16 pt-12 border-t border-line-light text-center">
             <h3 className="font-serif text-[22px] text-navy mb-4">{t('readyTitle')}</h3>
-            <Link href="/apply" className="inline-block bg-gold text-navy-deep px-8 py-3.5 text-[14.5px] font-semibold rounded-sm transition-all hover:bg-gold-bright">
+            <Link href="/apply" className="btn-gold px-9 py-4 text-[14.5px]">
               {t('viewProjects')}
             </Link>
           </div>

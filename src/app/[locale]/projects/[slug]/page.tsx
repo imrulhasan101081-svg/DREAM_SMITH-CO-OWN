@@ -3,6 +3,7 @@ import { Link } from '@/i18n/navigation';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'Dream Smith Chihno | Dream Smith Co-Own',
@@ -19,7 +20,8 @@ export default async function ProjectDetail({ params }: { params: { slug: string
   const t = await getTranslations('ProjectDetail');
 
   return (
-    <main className="min-h-screen bg-ivory">
+    <>
+      <main className="min-h-screen bg-ivory">
       <Header />
 
       {/* PROJECT HERO */}
@@ -77,7 +79,7 @@ export default async function ProjectDetail({ params }: { params: { slug: string
                 <div className="text-center text-[12px] text-gold-bright font-mono mb-8">{t('sharesRemaining', { count: 98 })}</div>
               </div>
 
-              <Link href="/apply" className="block text-center bg-gold text-navy-deep w-full py-4 text-[15px] font-semibold rounded-sm tracking-wide transition-all hover:bg-gold-bright">
+              <Link href="/apply" className="btn-gold block text-center w-full py-4 text-[15px] font-semibold tracking-wide">
                 {t('reserveYourShare')}
               </Link>
             </div>
@@ -146,12 +148,9 @@ export default async function ProjectDetail({ params }: { params: { slug: string
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-navy-deep text-ivory/50 py-10 border-t border-gold/10 text-[13px] text-center">
-        <div className="max-w-[1180px] mx-auto px-8">
-          <p>{t('copyright')}</p>
-        </div>
-      </footer>
-    </main>
+      </main>
+
+      <Footer />
+    </>
   );
 }

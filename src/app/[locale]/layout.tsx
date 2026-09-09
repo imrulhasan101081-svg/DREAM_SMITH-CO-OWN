@@ -84,8 +84,12 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXTAUTH_URL || "http://localhost:3000"),
-  title: "Dream Smith Co-Own",
-  description: "Fractional Real Estate Co-Ownership Platform",
+  title: {
+    default: "Dream Smith Co-Own | Fractional Real Estate · Rajshahi",
+    template: "%s | Dream Smith Co-Own",
+  },
+  description: "Co-own 100 sq. ft. of Dream Smith Chihno for ৳4,00,000 — fully documented, notarized, and backed by a bank-secured buy-back. RJSC registered since 2011.",
+  keywords: ["fractional real estate", "co-ownership", "Rajshahi", "Dream Smith", "investment Bangladesh", "land deed"],
   icons: {
     icon: "/images/logo/official-logo-icon.png",
     apple: "/images/logo/official-logo-icon.png",
@@ -94,9 +98,11 @@ export const metadata: Metadata = {
     google: "google06493120933d599f",
   },
   openGraph: {
-    title: "Dream Smith Co-Own",
-    description: "Fractional Real Estate Co-Ownership Platform",
+    title: "Dream Smith Co-Own | Fractional Real Estate · Rajshahi",
+    description: "Co-own 100 sq. ft. of Dream Smith Chihno for ৳4,00,000 — fully documented, notarized, and backed by a bank-secured buy-back.",
     siteName: "Dream Smith Co-Own",
+    locale: "en_US",
+    type: "website",
     images: [
       {
         url: "/images/logo/official-logo-full.png",

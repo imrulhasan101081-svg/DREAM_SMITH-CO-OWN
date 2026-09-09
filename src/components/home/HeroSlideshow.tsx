@@ -88,7 +88,7 @@ export default function HeroSlideshow() {
           return (
             <div
               key={slide.id}
-              className={`absolute inset-0 w-full h-full transition-opacity duration-1200 ease-out ${
+              className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-out ${
                 isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
               }`}
               aria-hidden={!isActive}

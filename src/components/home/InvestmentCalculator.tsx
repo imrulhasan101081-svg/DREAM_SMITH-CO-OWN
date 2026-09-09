@@ -94,7 +94,7 @@ export default function InvestmentCalculator() {
               {shares}
             </span>
             <span className="eyebrow text-ivory/50 text-[11px]">
-              {shares === 1 ? 'SHARE' : 'SHARES'} ({((shares / 120) * 100).toFixed(1)}% of Project)
+              {shares === 1 ? 'SHARE' : 'SHARES'} ({((shares / 274) * 100).toFixed(1)}% of Project)
             </span>
           </div>
         </div>
