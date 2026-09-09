@@ -46,7 +46,7 @@ const slides: Slide[] = [
     id: 'tower',
     image: tower,
     code: '04',
-    title: '10-STOREY TOWER',
+    title: '10 STOREY TOWER',
     category: 'Flagship Vertical Asset',
     alt: 'Dream Smith Chihno 10-storey landmark tower',
   },
@@ -136,10 +136,10 @@ export default function HeroSlideshow() {
       <div className="absolute bottom-28 right-6 md:right-12 z-30 hidden md:flex flex-col items-end gap-3 max-w-sm">
         {/* Active Perspective Label */}
         <div className="text-right transition-all duration-300">
-          <span className="eyebrow text-[9.5px] text-gold-bright block tracking-widest">
-            {slides[currentIndex].code} / 04 · {slides[currentIndex].title}
+          <span className="font-mono text-[10px] text-gold-bright block tracking-[0.18em] uppercase font-semibold">
+            {slides[currentIndex].code} / 04 &nbsp;·&nbsp; {slides[currentIndex].title}
           </span>
-          <span className="text-[11.5px] text-ivory/60 font-light block mt-0.5">
+          <span className="text-[12px] text-ivory/85 font-light block mt-0.5 tracking-wide">
             {slides[currentIndex].category}
           </span>
         </div>
@@ -153,12 +153,14 @@ export default function HeroSlideshow() {
                 key={slide.id}
                 onClick={() => setCurrentIndex(idx)}
                 aria-label={`View perspective ${slide.code}: ${slide.title}`}
-                className="group relative flex flex-col items-start gap-1 py-1.5 px-2 cursor-pointer transition-all duration-300"
+                className={`group relative flex flex-col items-start gap-1 py-1.5 px-2 cursor-pointer transition-all duration-300 rounded-sm ${
+                  isActive ? 'bg-gold/10 border border-gold/40' : 'border border-transparent hover:bg-ivory/5'
+                }`}
               >
                 <div className="flex items-center gap-1.5">
                   <span
                     className={`font-mono text-[10px] tracking-wider transition-colors ${
-                      isActive ? 'text-gold-bright font-semibold' : 'text-ivory/40 group-hover:text-ivory/80'
+                      isActive ? 'text-gold-bright font-semibold' : 'text-ivory/65 group-hover:text-ivory/90'
                     }`}
                   >
                     {slide.code}
@@ -166,7 +168,7 @@ export default function HeroSlideshow() {
                 </div>
 
                 {/* Hardware-accelerated CSS Progress bar line */}
-                <div className="w-10 md:w-12 h-[2px] bg-ivory/15 rounded-full overflow-hidden relative">
+                <div className="w-10 md:w-12 h-[2px] bg-ivory/20 rounded-full overflow-hidden relative">
                   {isActive ? (
                     <div
                       key={`progress-${idx}-${currentIndex}`}
@@ -175,7 +177,7 @@ export default function HeroSlideshow() {
                       }`}
                     />
                   ) : (
-                    <div className="h-full w-0 group-hover:w-full bg-ivory/30 transition-all duration-300" />
+                    <div className="h-full w-0 group-hover:w-full bg-ivory/40 transition-all duration-300" />
                   )}
                 </div>
               </button>
@@ -186,14 +188,14 @@ export default function HeroSlideshow() {
           <div className="flex items-center gap-1 ml-1.5 pl-2 border-l border-ivory/15">
             <button
               onClick={prevSlide}
-              className="w-7 h-7 flex items-center justify-center text-ivory/60 hover:text-gold-bright transition-colors rounded hover:bg-ivory/10 font-mono text-[14px]"
+              className="w-7 h-7 flex items-center justify-center text-ivory/70 hover:text-gold-bright transition-colors rounded hover:bg-ivory/10 font-mono text-[14px]"
               aria-label="Previous Perspective"
             >
               ←
             </button>
             <button
               onClick={nextSlide}
-              className="w-7 h-7 flex items-center justify-center text-ivory/60 hover:text-gold-bright transition-colors rounded hover:bg-ivory/10 font-mono text-[14px]"
+              className="w-7 h-7 flex items-center justify-center text-ivory/70 hover:text-gold-bright transition-colors rounded hover:bg-ivory/10 font-mono text-[14px]"
               aria-label="Next Perspective"
             >
               →
