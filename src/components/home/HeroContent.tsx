@@ -72,25 +72,22 @@ export default function HeroContent({
           <Reveal y={14}>
             <div className="flex items-center gap-0 mb-8 overflow-hidden">
 
-              {/* Anchored Left — Live Status + Verified Mark */}
+              {/* Anchored Left — Dream Smith Identity Badge */}
               <div className="flex-shrink-0 flex items-center gap-0 z-10 mr-5">
-                {/* Live investment status */}
-                <div className="flex items-center gap-2 bg-navy-surface/90 backdrop-blur-md border border-gold/40 border-r-0 px-3 py-1.5">
+                {/* Brand status badge */}
+                <div className="flex items-center gap-2 bg-navy-surface/90 backdrop-blur-md border border-gold/40 border-r-0 px-3.5 py-1.5">
                   <span className="relative flex h-2 w-2" aria-hidden="true">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-bright opacity-60" />
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-gold-bright" />
                   </span>
                   <span className="font-mono text-[10px] text-gold-bright tracking-[0.2em] font-bold whitespace-nowrap uppercase">
-                    LIVE INVESTMENT
+                    DREAM SMITH PROPERTIES
                   </span>
                 </div>
-                {/* Divider + verified certified mark */}
+                {/* Legacy mark */}
                 <div className="flex items-center gap-2 bg-navy-surface/70 backdrop-blur-md border border-gold/25 px-3 py-1.5">
-                  <svg className="w-3 h-3 text-gold shrink-0" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                    <path d="M8 0L9.8 5.5H15.6L10.9 8.9L12.7 14.4L8 11L3.3 14.4L5.1 8.9L0.4 5.5H6.2L8 0Z"/>
-                  </svg>
                   <span className="font-mono text-[10px] text-ivory/80 tracking-[0.18em] font-medium whitespace-nowrap uppercase">
-                    AZO GROUP VERIFIED
+                    EST. 2011 · RAJSHAHI
                   </span>
                 </div>
               </div>
@@ -101,22 +98,25 @@ export default function HeroContent({
                 <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-navy-deep/80 to-transparent z-10 pointer-events-none" />
                 <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-navy-deep/80 to-transparent z-10 pointer-events-none" />
 
-                <div className="flex animate-hero-ticker whitespace-nowrap" style={{ animationDuration: '30s' }}>
+                <div className="flex animate-hero-ticker whitespace-nowrap" style={{ animationDuration: '32s' }}>
                   {[0, 1].map((pass) => (
                     <div key={pass} className="flex items-center gap-0 flex-shrink-0">
                       {[
-                        { icon: '◈', label: 'FREEHOLD LAND TITLE ESCROW' },
-                        { icon: '▣', label: 'DUAL-KEY BANK TRUST' },
-                        { icon: '◉', label: '274 CO-OWN SHARES TOTAL' },
-                        { icon: '◈', label: 'NOTARIZED STAMP DEED' },
+                        { icon: '◈', label: 'DREAM SMITH CHIHNO' },
+                        { icon: '▣', label: '10 STOREY LANDMARK TOWER' },
+                        { icon: '◉', label: 'OKTROY MORE · KAZLA' },
+                        { icon: '◈', label: 'ADJACENT TO RUET CAMPUS' },
+                        { icon: '▣', label: '৳4,00,000 PER FRACTIONAL SHARE' },
+                        { icon: '◉', label: '100 SQ. FT. UNDIVIDED DEED' },
+                        { icon: '◈', label: '274 TOTAL CO-OWN SHARES' },
+                        { icon: '▣', label: '37.5% GUARANTEED RETURN' },
+                        { icon: '◉', label: '36-MONTH BUYBACK COVENANT' },
+                        { icon: '◈', label: 'NOTARIZED NON-JUDICIAL STAMP' },
                         { icon: '▣', label: 'SUB-REGISTRY RAJSHAHI' },
-                        { icon: '◉', label: '37.5% GUARANTEED YIELD' },
-                        { icon: '◈', label: '36-MONTH BUYBACK COVENANT' },
-                        { icon: '▣', label: '100 SQ.FT. PER SHARE' },
-                        { icon: '◉', label: 'SHA-256 CHAIN VERIFIED' },
-                        { icon: '◈', label: 'G+9 RESIDENTIAL COMPLEX' },
-                        { icon: '▣', label: 'RAJSHAHI CITY CORP. ZONE' },
-                        { icon: '◉', label: 'OKTROY MORE, KAZLA' },
+                        { icon: '◉', label: 'FREEHOLD LAND TITLE ESCROW' },
+                        { icon: '◈', label: 'DUAL-KEY BANK TRUST' },
+                        { icon: '▣', label: 'RJSC REGISTERED DEVELOPER' },
+                        { icon: '◉', label: 'SHA-256 DIGITAL CERTIFICATE' },
                       ].map((item) => (
                         <span
                           key={`${pass}-${item.label}`}
