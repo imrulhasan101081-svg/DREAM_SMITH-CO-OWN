@@ -69,7 +69,7 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           disabled={status === 'submitting'}
-          className="w-full border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold text-[14px] disabled:opacity-50"
+          className="w-full border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold text-[16px] sm:text-[14px] disabled:opacity-50"
           placeholder={t('fullNamePlaceholder')}
         />
       </div>
@@ -82,7 +82,7 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           disabled={status === 'submitting'}
-          className="w-full border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold text-[14px] disabled:opacity-50"
+          className="w-full border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold text-[16px] sm:text-[14px] disabled:opacity-50"
           placeholder={t('emailPlaceholder')}
         />
       </div>
@@ -94,7 +94,7 @@ export default function ContactForm() {
           value={formData.phone}
           onChange={handleChange}
           disabled={status === 'submitting'}
-          className="w-full border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold text-[14px] disabled:opacity-50"
+          className="w-full border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold text-[16px] sm:text-[14px] disabled:opacity-50"
           placeholder={t('phonePlaceholder')}
         />
       </div>
@@ -107,14 +107,14 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           disabled={status === 'submitting'}
-          className="w-full border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold text-[14px] resize-y disabled:opacity-50"
+          className="w-full border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold text-[16px] sm:text-[14px] resize-y disabled:opacity-50"
           placeholder={t('messagePlaceholder')}
         />
       </div>
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="w-full bg-gold text-navy-deep py-3.5 font-semibold rounded-sm hover:bg-gold-bright transition-colors disabled:opacity-50"
+        className="btn-gold w-full py-4 text-[15px] font-semibold tracking-wide disabled:opacity-50"
       >
         {status === 'submitting' ? t('sending') : t('send')}
       </button>

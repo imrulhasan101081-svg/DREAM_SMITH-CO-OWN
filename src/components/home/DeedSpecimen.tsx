@@ -8,29 +8,29 @@ export default function DeedSpecimen() {
   const [activeTab, setActiveTab] = useState<'deed' | 'safeguards' | 'audit'>('deed');
 
   return (
-    <div className="bg-ivory border border-line-light rounded-sm p-6 sm:p-10 md:p-14 relative shadow-xl">
+    <div className="bg-ivory border border-line-light rounded-sm p-4 sm:p-8 md:p-14 relative shadow-xl">
       {/* Header section */}
-      <div className="max-w-[720px] mb-10">
+      <div className="max-w-[720px] mb-8 sm:mb-10">
         <div className="flex items-center gap-3 mb-4">
           <span className="w-8 h-px bg-gold" aria-hidden="true" />
-          <span className="eyebrow text-gold text-[11px] font-bold tracking-[0.24em]">
+          <span className="eyebrow text-gold text-[10.5px] sm:text-[11px] font-bold tracking-[0.2em] sm:tracking-[0.24em]">
             INSTITUTIONAL TRUST ARTIFACT // DEED OF TITLE
           </span>
         </div>
-        <h2 className="font-serif text-[clamp(28px,3.4vw,46px)] text-navy font-normal leading-[1.08] tracking-[-0.015em] mb-4 text-balance">
+        <h2 className="font-serif text-[clamp(26px,3.4vw,46px)] text-navy font-normal leading-[1.1] tracking-[-0.015em] mb-4 text-balance">
           Audited Ownership. <em className="italic text-gold">Legally Irrevocable.</em>
         </h2>
-        <p className="text-ink/65 text-[15.5px] leading-relaxed">
+        <p className="text-ink/65 text-[14.5px] sm:text-[15.5px] leading-relaxed">
           Every Dream Smith Co-Own investment is backed by a registered sub-deed of land title, executed in the investor’s legal name at the Government Sub-Registry Office.
         </p>
       </div>
 
       {/* Tabs */}
-      <div className="flex border-b border-line-light mb-8">
+      <div className="flex border-b border-line-light mb-8 overflow-x-auto no-scrollbar gap-2 sm:gap-0">
         <button
           type="button"
           onClick={() => setActiveTab('deed')}
-          className={`pb-3 px-4 text-[12px] font-mono tracking-wider transition-all border-b-2 -mb-px ${
+          className={`pb-3 px-3 sm:px-4 text-[11px] sm:text-[12px] font-mono tracking-wider transition-all border-b-2 -mb-px whitespace-nowrap ${
             activeTab === 'deed'
               ? 'border-gold text-navy font-bold'
               : 'border-transparent text-ink/50 hover:text-ink'
@@ -41,7 +41,7 @@ export default function DeedSpecimen() {
         <button
           type="button"
           onClick={() => setActiveTab('safeguards')}
-          className={`pb-3 px-4 text-[12px] font-mono tracking-wider transition-all border-b-2 -mb-px ${
+          className={`pb-3 px-3 sm:px-4 text-[11px] sm:text-[12px] font-mono tracking-wider transition-all border-b-2 -mb-px whitespace-nowrap ${
             activeTab === 'safeguards'
               ? 'border-gold text-navy font-bold'
               : 'border-transparent text-ink/50 hover:text-ink'
@@ -52,7 +52,7 @@ export default function DeedSpecimen() {
         <button
           type="button"
           onClick={() => setActiveTab('audit')}
-          className={`pb-3 px-4 text-[12px] font-mono tracking-wider transition-all border-b-2 -mb-px ${
+          className={`pb-3 px-3 sm:px-4 text-[11px] sm:text-[12px] font-mono tracking-wider transition-all border-b-2 -mb-px whitespace-nowrap ${
             activeTab === 'audit'
               ? 'border-gold text-navy font-bold'
               : 'border-transparent text-ink/50 hover:text-ink'

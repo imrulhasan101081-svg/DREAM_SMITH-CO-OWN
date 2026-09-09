@@ -46,7 +46,7 @@ export default function Header() {
             : 'bg-navy border-transparent py-3'
         }`}
       >
-        <nav className="flex items-center justify-between gap-6 px-6 md:px-10 max-w-[1320px] mx-auto">
+        <nav className="flex items-center justify-between gap-4 sm:gap-6 px-4 sm:px-6 md:px-10 max-w-[1320px] mx-auto">
           <Link href="/" aria-label="Dream Smith Co-Own — home" className="flex items-center shrink-0 py-1 transition-opacity hover:opacity-90">
             <Image
               src="/images/logo/official-logo-full.png"
@@ -54,7 +54,7 @@ export default function Header() {
               width={280}
               height={90}
               priority
-              className="h-12 md:h-16 w-auto object-contain"
+              className="h-11 sm:h-13 md:h-16 w-auto object-contain"
             />
           </Link>
 
@@ -80,11 +80,11 @@ export default function Header() {
             </Link>
           </div>
 
-          <div className="flex items-center gap-3 lg:hidden">
+          <div className="flex items-center gap-2 sm:gap-3 lg:hidden">
             <LocaleSwitcher />
             <button
               onClick={() => setOpen((v) => !v)}
-              className="text-ivory p-2 -mr-2"
+              className="text-ivory p-2 -mr-2 touch-manipulation"
               aria-label={t('toggleMenuAria')}
               aria-expanded={open}
             >
@@ -101,7 +101,7 @@ export default function Header() {
       </header>
 
       {open && (
-        <div className="fixed inset-0 z-40 lg:hidden flex flex-col bg-navy-deep/98 backdrop-blur-xl pt-16 px-8 pb-12 overflow-y-auto animate-fade-in">
+        <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-navy-deep/98 backdrop-blur-2xl pt-6 px-6 sm:px-8 pb-12 overflow-y-auto no-scrollbar">
           <div className="flex items-center justify-between pb-6 mb-4 border-b border-gold/15">
             <Link href="/" onClick={() => setOpen(false)} className="flex items-center shrink-0">
               <Image
@@ -110,12 +110,12 @@ export default function Header() {
                 width={220}
                 height={73}
                 priority
-                className="h-11 w-auto object-contain"
+                className="h-10 sm:h-11 w-auto object-contain"
               />
             </Link>
             <button
               onClick={() => setOpen(false)}
-              className="text-ivory/70 hover:text-ivory p-2 -mr-2 transition-colors"
+              className="text-ivory/70 hover:text-ivory p-2 -mr-2 transition-colors touch-manipulation"
               aria-label="Close menu"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
@@ -130,7 +130,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="font-serif text-ivory text-[20px] py-4 border-b border-gold/15 flex items-baseline gap-4 hover:text-gold-bright transition-colors"
+                className="font-serif text-ivory text-[19px] sm:text-[20px] py-3.5 sm:py-4 border-b border-gold/15 flex items-baseline gap-4 hover:text-gold-bright transition-colors"
               >
                 <span className="eyebrow text-gold/50 text-[10px]">
                   {String(i + 1).padStart(2, '0')}
@@ -140,11 +140,11 @@ export default function Header() {
             ))}
           </div>
 
-          <div className="mt-10 flex flex-col gap-3">
-            <Link href="/apply" onClick={() => setOpen(false)} className="btn-gold w-full py-4 text-[15px]">
+          <div className="mt-8 sm:mt-10 flex flex-col gap-3">
+            <Link href="/apply" onClick={() => setOpen(false)} className="btn-gold w-full py-3.5 sm:py-4 text-[14.5px] sm:text-[15px]">
               {t('reserveShare')}
             </Link>
-            <Link href="/portal" onClick={() => setOpen(false)} className="btn-outline w-full py-4 text-[14px]">
+            <Link href="/portal" onClick={() => setOpen(false)} className="btn-outline w-full py-3.5 sm:py-4 text-[14px]">
               {t('portalLinkMobile')}
             </Link>
           </div>

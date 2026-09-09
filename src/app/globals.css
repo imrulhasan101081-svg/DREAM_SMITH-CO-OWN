@@ -337,6 +337,15 @@
     content-visibility: auto;
     contain-intrinsic-size: 1px 750px;
   }
+
+  /* Hide scrollbar for clean touch-scroll components */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 /* ── Hardware-Accelerated Animation Keyframes ───────────────────────────── */

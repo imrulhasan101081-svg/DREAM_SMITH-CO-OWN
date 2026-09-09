@@ -8,9 +8,9 @@ export default function Footer() {
 
   return (
     <footer id="contact" className="bg-navy-deep text-ivory/50 py-10 md:py-14 pb-6 md:pb-7 text-[13px]">
-      <div className="max-w-[1180px] mx-auto px-5 sm:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr] gap-8 md:gap-10 mb-8 md:mb-10">
-          <div className="col-span-2 md:col-span-1">
+      <div className="max-w-[1180px] mx-auto px-4 sm:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-8 md:gap-10 mb-8 md:mb-10">
+          <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex flex-col text-ivory mb-5">
               <Link href="/" className="inline-block mb-3 transition-opacity hover:opacity-90">
                 <Image
@@ -18,7 +18,7 @@ export default function Footer() {
                   alt="Dream Smith Co-Own"
                   width={260}
                   height={65}
-                  className="h-14 md:h-16 w-auto object-contain"
+                  className="h-13 sm:h-14 md:h-16 w-auto object-contain"
                 />
               </Link>
               <div className="pt-2.5 border-t border-gold/15 flex items-center gap-2 max-w-[280px]">

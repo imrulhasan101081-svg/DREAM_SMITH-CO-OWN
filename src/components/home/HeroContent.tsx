@@ -65,27 +65,27 @@ export default function HeroContent({
       </div>
 
       {/* Foreground Hero Narrative */}
-      <div className="relative z-20 max-w-[1360px] mx-auto px-6 md:px-12 pt-32 pb-16 md:pt-40 md:pb-20 w-full flex flex-col justify-end flex-1">
+      <div className="relative z-20 max-w-[1360px] mx-auto px-4 sm:px-6 md:px-12 pt-28 pb-14 md:pt-40 md:pb-20 w-full flex flex-col justify-end flex-1">
         <motion.div style={{ y: contentY, opacity: contentOpacity }} className="max-w-[860px]">
           
           {/* Institutional Scrolling Ticker Strip */}
           <Reveal y={14}>
-            <div className="flex items-center gap-0 mb-8 overflow-hidden">
+            <div className="flex items-center gap-0 mb-6 sm:mb-8 overflow-hidden">
 
               {/* Anchored Left — Dream Smith Identity Badge */}
-              <div className="flex-shrink-0 flex items-center gap-0 z-10 mr-5">
+              <div className="flex-shrink-0 flex items-center gap-0 z-10 mr-3 sm:mr-5">
                 {/* Brand status badge */}
-                <div className="flex items-center gap-2 bg-navy-surface/90 backdrop-blur-md border border-gold/40 border-r-0 px-3.5 py-1.5">
+                <div className="flex items-center gap-2 bg-navy-surface/90 backdrop-blur-md border border-gold/40 border-r-0 px-2.5 sm:px-3.5 py-1.5">
                   <span className="relative flex h-2 w-2" aria-hidden="true">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-bright opacity-60" />
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-gold-bright" />
                   </span>
-                  <span className="font-mono text-[10px] text-gold-bright tracking-[0.2em] font-bold whitespace-nowrap uppercase">
-                    DREAM SMITH PROPERTIES
+                  <span className="font-mono text-[9.5px] sm:text-[10px] text-gold-bright tracking-[0.16em] sm:tracking-[0.2em] font-bold whitespace-nowrap uppercase">
+                    DREAM SMITH
                   </span>
                 </div>
                 {/* Legacy mark */}
-                <div className="flex items-center gap-2 bg-navy-surface/70 backdrop-blur-md border border-gold/25 px-3 py-1.5">
+                <div className="hidden sm:flex items-center gap-2 bg-navy-surface/70 backdrop-blur-md border border-gold/25 px-3 py-1.5">
                   <span className="font-mono text-[10px] text-ivory/80 tracking-[0.18em] font-medium whitespace-nowrap uppercase">
                     EST. 2011 · RAJSHAHI
                   </span>
@@ -95,8 +95,8 @@ export default function HeroContent({
               {/* Scrolling ticker */}
               <div className="flex-1 overflow-hidden relative" aria-hidden="true">
                 {/* Fade edges */}
-                <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-navy-deep/80 to-transparent z-10 pointer-events-none" />
-                <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-navy-deep/80 to-transparent z-10 pointer-events-none" />
+                <div className="absolute left-0 top-0 bottom-0 w-6 sm:w-8 bg-gradient-to-r from-navy-deep/80 to-transparent z-10 pointer-events-none" />
+                <div className="absolute right-0 top-0 bottom-0 w-6 sm:w-8 bg-gradient-to-l from-navy-deep/80 to-transparent z-10 pointer-events-none" />
 
                 <div className="flex animate-hero-ticker whitespace-nowrap" style={{ animationDuration: '32s' }}>
                   {[0, 1].map((pass) => (
@@ -120,7 +120,7 @@ export default function HeroContent({
                       ].map((item) => (
                         <span
                           key={`${pass}-${item.label}`}
-                          className="inline-flex items-center gap-2 px-5 font-mono text-[10px] tracking-[0.16em] text-ivory/60 uppercase border-r border-gold/15 last:border-r-0 leading-none py-1.5"
+                          className="inline-flex items-center gap-2 px-4 sm:px-5 font-mono text-[9.5px] sm:text-[10px] tracking-[0.14em] sm:tracking-[0.16em] text-ivory/60 uppercase border-r border-gold/15 last:border-r-0 leading-none py-1.5"
                         >
                           <span className="text-gold text-[7px]">{item.icon}</span>
                           {item.label}
@@ -134,7 +134,7 @@ export default function HeroContent({
           </Reveal>
 
           {/* Master Display Headline */}
-          <h1 className="font-serif font-normal text-[clamp(44px,7.5vw,94px)] leading-[0.96] tracking-[-0.03em] text-balance">
+          <h1 className="font-serif font-normal text-[clamp(34px,7.5vw,94px)] leading-[0.98] tracking-[-0.03em] text-balance">
             <Reveal as="span" className="block text-ivory drop-shadow-sm" y={32} delay={60}>
               {tTitleLine1}
             </Reveal>
@@ -145,24 +145,24 @@ export default function HeroContent({
 
           {/* Subtitle / Value Proposition */}
           <Reveal delay={240} y={20}>
-            <p className="mt-8 max-w-[620px] text-[16px] md:text-[17.5px] leading-[1.7] text-ivory/75 font-light text-balance">
+            <p className="mt-6 sm:mt-8 max-w-[620px] text-[15px] sm:text-[16px] md:text-[17.5px] leading-[1.65] text-ivory/75 font-light text-balance">
               {tSubtitle}
             </p>
           </Reveal>
 
           {/* Primary Action Buttons */}
           <Reveal delay={340} y={20}>
-            <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6 max-w-[500px] sm:max-w-none">
+            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-6 max-w-[440px] sm:max-w-none">
               <Link
                 href="/apply"
-                className="btn-gold px-9 py-4 text-[13.5px] font-semibold tracking-wider uppercase group text-center justify-center shadow-lg"
+                className="btn-gold px-8 sm:px-9 py-3.5 sm:py-4 text-[13.5px] font-semibold tracking-wider uppercase group text-center justify-center shadow-lg"
               >
                 <span>{tReserveShare}</span>
                 <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </Link>
               <Link
                 href="/verify"
-                className="inline-flex items-center justify-center gap-2 text-ivory/70 hover:text-gold-bright text-[13px] font-mono tracking-wider transition-colors duration-300 py-3"
+                className="inline-flex items-center justify-center gap-2 text-ivory/70 hover:text-gold-bright text-[12.5px] sm:text-[13px] font-mono tracking-wider transition-colors duration-300 py-2.5 sm:py-3"
               >
                 <span>VERIFY DEED REGISTRY</span>
                 <span aria-hidden="true">↗</span>
@@ -174,9 +174,9 @@ export default function HeroContent({
         {/* High-Precision Institutional Stat Rail */}
         <motion.div
           style={{ y: statsY }}
-          className="mt-14 md:mt-24 border-t border-ivory/15 pt-8 bg-gradient-to-r from-navy-deep/60 via-navy-deep/40 to-transparent backdrop-blur-sm -mx-6 px-6 md:-mx-12 md:px-12"
+          className="mt-12 sm:mt-16 md:mt-24 border-t border-ivory/15 pt-6 sm:pt-8 bg-gradient-to-r from-navy-deep/60 via-navy-deep/40 to-transparent backdrop-blur-sm -mx-4 px-4 sm:-mx-6 sm:px-6 md:-mx-12 md:px-12"
         >
-          <dl className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 sm:gap-x-8 gap-y-6 lg:gap-y-0 max-w-[1360px] mx-auto">
+          <dl className="grid grid-cols-2 lg:grid-cols-4 gap-x-3 sm:gap-x-8 gap-y-5 lg:gap-y-0 max-w-[1360px] mx-auto">
             {[
               { v: stats.price, k: stats.priceLabel, sub: 'Notarized Stamp Agreement' },
               { v: stats.term, k: stats.termLabel, suffix: stats.termSuffix, sub: '30 Mo Build + 6 Mo Settlement' },
@@ -187,22 +187,22 @@ export default function HeroContent({
                 key={stat.k}
                 delay={100 * i}
                 y={18}
-                className={`py-2 lg:py-0 lg:px-8 first:lg:pl-0 ${
+                className={`py-1.5 sm:py-2 lg:py-0 lg:px-8 first:lg:pl-0 ${
                   i > 0 ? 'lg:border-l border-ivory/15' : ''
                 }`}
               >
-                <dd className="font-serif text-[clamp(28px,3.2vw,40px)] leading-tight text-gold-gradient figures font-normal py-0.5">
+                <dd className="font-serif text-[clamp(24px,3vw,40px)] leading-tight text-gold-gradient figures font-normal py-0.5">
                   {stat.v}
                   {stat.suffix && (
-                    <span className="font-mono text-[12px] ml-1.5 text-gold-bright align-top font-medium tracking-wider">
+                    <span className="font-mono text-[11px] sm:text-[12px] ml-1.5 text-gold-bright align-top font-medium tracking-wider">
                       {stat.suffix}
                     </span>
                   )}
                 </dd>
-                <dt className="eyebrow text-[10.5px] text-ivory/85 mt-2.5 tracking-[0.2em] font-bold">
+                <dt className="eyebrow text-[9.5px] sm:text-[10.5px] text-ivory/85 mt-2 tracking-[0.16em] sm:tracking-[0.2em] font-bold">
                   {stat.k}
                 </dt>
-                <span className="block text-[11.5px] text-ivory/65 font-normal mt-1">
+                <span className="block text-[10.5px] sm:text-[11.5px] text-ivory/65 font-normal mt-0.5">
                   {stat.sub}
                 </span>
               </Reveal>

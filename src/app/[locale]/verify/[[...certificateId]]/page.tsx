@@ -78,68 +78,68 @@ export default function VerifyPage({ params }: { params: { certificateId?: strin
           </nav>
         </header>
 
-        <section className="py-24">
-          <div className="max-w-[700px] mx-auto px-8">
+        <section className="py-16 sm:py-24">
+          <div className="max-w-[700px] mx-auto px-4 sm:px-8">
 
-            <div className="text-center mb-10">
-              <span className="eyebrow text-[12px] tracking-[0.2em] text-gold uppercase mb-4 block font-bold">{t('eyebrow')}</span>
-              <h1 className="font-serif text-[36px] text-navy mb-4">{t('title')}</h1>
-              <p className="text-[15px] text-ink/70">{t('description')}</p>
+            <div className="text-center mb-8 sm:mb-10">
+              <span className="eyebrow text-[11px] sm:text-[12px] tracking-[0.2em] text-gold uppercase mb-3 sm:mb-4 block font-bold">{t('eyebrow')}</span>
+              <h1 className="font-serif text-[28px] sm:text-[36px] text-navy mb-3 sm:mb-4">{t('title')}</h1>
+              <p className="text-[14.5px] sm:text-[15px] text-ink/70">{t('description')}</p>
             </div>
 
-            <div className="bg-white border border-line-light p-10 rounded-sm shadow-sm mb-12">
-              <form onSubmit={handleVerify} className="flex gap-4">
+            <div className="bg-white border border-line-light p-6 sm:p-10 rounded-sm shadow-sm mb-8 sm:mb-12">
+              <form onSubmit={handleVerify} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <input
                   type="text"
                   value={certId}
                   onChange={(e) => setCertId(e.target.value)}
                   placeholder={t('inputPlaceholder')}
-                  className="flex-1 border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold transition-colors font-mono text-[14px]"
+                  className="flex-1 border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold transition-colors font-mono text-[16px] sm:text-[14px]"
                 />
-                <button type="submit" disabled={isLoading} className="bg-navy text-ivory px-8 py-3 font-medium rounded-sm transition-all hover:bg-navy-deep disabled:opacity-50">
+                <button type="submit" disabled={isLoading} className="btn-gold px-8 py-3.5 sm:py-3 font-semibold text-center justify-center disabled:opacity-50">
                   {isLoading ? t('verifying') : t('verify')}
                 </button>
               </form>
             </div>
 
             {verified === true && (
-              <div className="bg-navy p-10 rounded-sm text-ivory relative overflow-hidden shadow-lg border border-gold/20">
-                <div className="absolute top-6 right-6 bg-sage text-white px-3 py-1 text-[11px] font-mono rounded-sm tracking-widest">● {t('authentic')}</div>
+              <div className="bg-navy p-6 sm:p-10 rounded-sm text-ivory relative overflow-hidden shadow-lg border border-gold/20">
+                <div className="sm:absolute top-6 right-6 inline-block mb-4 sm:mb-0 bg-sage text-white px-3 py-1 text-[11px] font-mono rounded-sm tracking-widest">● {t('authentic')}</div>
 
-                <div className="mb-8">
-                  <div className="font-mono text-[11px] text-gold-bright tracking-widest uppercase mb-1">{t('certificateNumber')}</div>
-                  <div className="font-mono text-[18px]">{certData?.certificate_id}</div>
+                <div className="mb-6 sm:mb-8">
+                  <div className="font-mono text-[10.5px] sm:text-[11px] text-gold-bright tracking-widest uppercase mb-1">{t('certificateNumber')}</div>
+                  <div className="font-mono text-[16px] sm:text-[18px] break-all">{certData?.certificate_id}</div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-y-6 gap-x-12 mb-8 border-b border-gold/10 pb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 sm:gap-y-6 gap-x-6 sm:gap-x-12 mb-6 sm:mb-8 border-b border-gold/10 pb-6 sm:pb-8">
                   <div>
                     <div className="font-mono text-[10px] text-ivory/40 tracking-widest uppercase mb-1">{t('holderName')}</div>
-                    <div className="font-serif text-[18px]">{certData?.investor_name}</div>
+                    <div className="font-serif text-[17px] sm:text-[18px]">{certData?.investor_name}</div>
                   </div>
                   <div>
                     <div className="font-mono text-[10px] text-ivory/40 tracking-widest uppercase mb-1">{t('project')}</div>
-                    <div className="font-serif text-[18px]">{certData?.project_name}</div>
+                    <div className="font-serif text-[17px] sm:text-[18px]">{certData?.project_name}</div>
                   </div>
                   <div>
                     <div className="font-mono text-[10px] text-ivory/40 tracking-widest uppercase mb-1">{t('shareVolume')}</div>
-                    <div className="font-serif text-[18px]">{t('units', { count: certData?.share_count ?? 0 })}</div>
+                    <div className="font-serif text-[17px] sm:text-[18px]">{t('units', { count: certData?.share_count ?? 0 })}</div>
                   </div>
                   <div>
                     <div className="font-mono text-[10px] text-ivory/40 tracking-widest uppercase mb-1">{t('maturityDate')}</div>
-                    <div className="font-serif text-[18px]">
+                    <div className="font-serif text-[17px] sm:text-[18px]">
                       {certData?.maturity_date ? new Date(certData.maturity_date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) : t('notAvailable')}
                     </div>
                   </div>
                 </div>
 
-                <div className="flex justify-between items-end">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
                   <div>
                     <div className="font-mono text-[10px] text-ivory/40 tracking-widest uppercase mb-1">{t('status')}</div>
                     <div className="text-[14px] text-sage">{certData?.status}</div>
                   </div>
-                  <div className="text-right">
+                  <div className="sm:text-right">
                     <div className="font-mono text-[10px] text-gold tracking-widest uppercase mb-1">{t('guaranteedBuyback')}</div>
-                    <div className="font-serif text-[24px] text-gold-bright">৳{certData?.buyback?.toLocaleString()}</div>
+                    <div className="font-serif text-[22px] sm:text-[24px] text-gold-bright">৳{certData?.buyback?.toLocaleString()}</div>
                   </div>
                 </div>
               </div>

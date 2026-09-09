@@ -134,23 +134,23 @@ export default function ApplyPage() {
 
                   <div>
                     <label className="block text-[13px] font-medium text-navy mb-2">{t('fullName')}</label>
-                    <input required type="text" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} className="w-full border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold transition-colors text-[15px]" placeholder={t('fullNamePlaceholder')} />
+                    <input required type="text" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} className="w-full border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold transition-colors text-[16px] sm:text-[15px]" placeholder={t('fullNamePlaceholder')} />
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <label className="block text-[13px] font-medium text-navy mb-2">{t('mobileNumber')}</label>
-                      <input required type="tel" value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})} className="w-full border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold transition-colors text-[15px]" placeholder={t('mobileNumberPlaceholder')} />
+                      <input required type="tel" value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})} className="w-full border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold transition-colors text-[16px] sm:text-[15px]" placeholder={t('mobileNumberPlaceholder')} />
                     </div>
                     <div>
                       <label className="block text-[13px] font-medium text-navy mb-2">{t('emailAddress')}</label>
-                      <input required type="email" value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} className="w-full border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold transition-colors text-[15px]" placeholder={t('emailPlaceholder')} />
+                      <input required type="email" value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} className="w-full border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold transition-colors text-[16px] sm:text-[15px]" placeholder={t('emailPlaceholder')} />
                     </div>
                   </div>
 
                   <div>
                     <label className="block text-[13px] font-medium text-navy mb-2">{t('nidNumber')}</label>
-                    <input required type="text" value={formData.nid} onChange={(e) => setFormData({...formData, nid: e.target.value})} className="w-full border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold transition-colors text-[15px]" placeholder={t('nidPlaceholder')} />
+                    <input required type="text" value={formData.nid} onChange={(e) => setFormData({...formData, nid: e.target.value})} className="w-full border border-line-light rounded-sm px-4 py-3 focus:outline-none focus:border-gold transition-colors text-[16px] sm:text-[15px]" placeholder={t('nidPlaceholder')} />
                   </div>
                 </div>
 
